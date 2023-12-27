@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: eHorglass.PcbDoc   2023/12/27  17:48:44
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : eHorglass-RoundHoles.TXT
+ASCII SlotHoles File : eHorglass-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.305mm)                                           Round             85        PTH        19.46inch (494.18mm)
+T2      28mil (0.701mm)                                           Slot              4         PTH        1.39inch (35.31mm)
+T3      35mil (0.899mm)                                           Round             4         PTH        1.40inch (35.59mm)
+T4      36mil (0.914mm)                                           Round             32        PTH        5.91inch (150.09mm)
+T5      40mil (1.016mm)                                           Round             24        PTH        9.36inch (237.79mm)
+T6      125mil (3.175mm)                                          Round             4         PTH        6.36inch (161.55mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              153
+
+Total Processing Time (hh:mm:ss) : 00:00:00

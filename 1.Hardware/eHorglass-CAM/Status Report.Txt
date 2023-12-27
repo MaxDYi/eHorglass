@@ -1,0 +1,10 @@
+Output: Test Point Report
+Type  : Test Points
+From  : Variant [[No Variations]] of Project [eHorglass.PrjPcb]
+   Generated File[Assembly Testpoint Report for eHorglass.ipc]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 17:49:07 On 2023/12/27
