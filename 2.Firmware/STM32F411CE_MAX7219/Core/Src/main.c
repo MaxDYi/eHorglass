@@ -53,7 +53,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-extern uint8_t code_disp1[38][8];
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -100,6 +100,16 @@ int main(void)
     led1.CS_Pin = LED1_CS_Pin;
     Max7219_Init(led1);
     Max7219_Test(led1);
+    uint8_t data[8] = { 0x01,0x03,0x07,0x0F,0x1F,0x3F,0x7F,0xFF };
+    Max7219_Display(led1, 0, data);
+    HAL_Delay(1000);
+    Max7219_Display(led1, 1, data);
+    HAL_Delay(1000);
+    Max7219_Display(led1, 2, data);
+    HAL_Delay(1000);
+    Max7219_Display(led1, 3, data);
+    HAL_Delay(1000);
+    Max7219_Display(led1, 0, data);
     /* USER CODE END 2 */
 
     /* Infinite loop */

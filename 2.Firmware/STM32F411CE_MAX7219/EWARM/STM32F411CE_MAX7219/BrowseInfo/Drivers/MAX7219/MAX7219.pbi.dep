@@ -39,4 +39,7 @@ E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\STM32F411CE_MAX7219\BrowseInfo
   E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
   E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\..\Core\Inc\spi.h \
-  E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\..\Core\Inc\main.h
+  E:\eHorglass\2.Firmware\STM32F411CE_MAX7219\EWARM\..\Core\Inc\main.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h

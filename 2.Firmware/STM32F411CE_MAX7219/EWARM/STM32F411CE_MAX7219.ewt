@@ -1456,6 +1456,9 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
                 </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\write.c</name>
+                </file>
             </group>
         </group>
     </group>

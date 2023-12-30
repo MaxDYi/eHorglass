@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2023-12-30 17:17:20
- * @LastEditTime : 2023-12-30 18:34:34
+ * @LastEditTime : 2023-12-30 19:52:08
  * @FilePath     : \STM32F411CE_MAX7219\Drivers\MAX7219\MAX7219.h
  */
 #ifndef __MAX7219_H__
@@ -27,7 +27,9 @@ void Max7219_TurnOffAll(max7219_handle handle);
 
 void Max7219_TurnOnAll(max7219_handle handle);
 
-void Max7219_Display(max7219_handle handle, uint8_t* data);
+void Max7219_RotateData(uint8_t direction, uint8_t* data);
+
+void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t* data);
 
 void Max7219_Test(max7219_handle handle);
 
