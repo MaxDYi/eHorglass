@@ -28,21 +28,42 @@
 /* USER CODE BEGIN Includes */
 #include "spi.h"
 #include "MAX7219.h"
+#include "MPU6050.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+#define CONFIG_SAND_NUM_DEFAULT 64
+#define CONFIG_SCREEN_BRIGHTNESS_DEFAULT 0x08
+#define CONFIG_GRAVITY_COEFFICENT_DEFAULT 1500
 
+#define CONFIG_BASE_ADDRESS 0X0800FC00
+#define CONFIG_INIT_FLAG_OFFSET_ADDRESS 0x0000
+#define CONFIG_SAND_NUM_OFFSET_ADDRESS 0x0004
+#define CONFIG_SCREEN_BRIGHTNESS_OFFSET_ADDRESS 0x0008
+#define CONFIG_GRAVITY_COEFFICENT_OFFSET_ADDRESS 0x000C
+
+#define CONFIG_INIT_FLAG_ADDRESS (CONFIG_BASE_ADDRESS + CONFIG_INIT_FLAG_OFFSET_ADDRESS)
+#define CONFIG_SAND_NUM_ADDRESS (CONFIG_BASE_ADDRESS + CONFIG_SAND_NUM_OFFSET_ADDRESS)
+#define CONFIG_SCREEN_BRIGHTNESS_ADDRESS (CONFIG_BASE_ADDRESS + CONFIG_SCREEN_BRIGHTNESS_OFFSET_ADDRESS)
+#define CONFIG_GRAVITY_COEFFICENT_ADDRESS (CONFIG_BASE_ADDRESS + CONFIG_GRAVITY_COEFFICENT_OFFSET_ADDRESS)
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+uint32_t initFlag = 0;
+uint32_t sandNum = CONFIG_SAND_NUM_DEFAULT;
+uint32_t screenBrightness = CONFIG_SCREEN_BRIGHTNESS_DEFAULT;
+uint32_t gravityCoefficent = CONFIG_GRAVITY_COEFFICENT_DEFAULT;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
+uint32_t FLASH_ReadWord(uint32_t address)
+{
+    return *(__IO uint32_t *)address;
+}
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -96,6 +117,34 @@ int main(void)
     MX_USART1_UART_Init();
     MX_USB_DEVICE_Init();
     /* USER CODE BEGIN 2 */
+    initFlag = FLASH_ReadWord(CONFIG_INIT_FLAG_ADDRESS);
+    if (initFlag == 0x01)
+    {
+        printf("Init Config\r\n");
+        uint32_t err = 0;
+        FLASH_EraseInitTypeDef EraseInitStruct = {
+            .TypeErase = FLASH_TYPEERASE_PAGES,
+            .PageAddress = CONFIG_BASE_ADDRESS,
+            .NbPages = 1};
+        HAL_FLASH_Unlock();
+        HAL_FLASHEx_Erase(&EraseInitStruct, &err);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, CONFIG_INIT_FLAG_ADDRESS, 0X01);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, CONFIG_SAND_NUM_ADDRESS, sandNum);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, CONFIG_SCREEN_BRIGHTNESS_ADDRESS, screenBrightness);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, CONFIG_GRAVITY_COEFFICENT_ADDRESS, gravityCoefficent);
+        HAL_FLASH_Lock();
+    }
+
+    sandNum = FLASH_ReadWord(CONFIG_BASE_ADDRESS + CONFIG_SAND_NUM_OFFSET_ADDRESS);
+    screenBrightness = FLASH_ReadWord(CONFIG_BASE_ADDRESS + CONFIG_SCREEN_BRIGHTNESS_OFFSET_ADDRESS);
+    gravityCoefficent = FLASH_ReadWord(CONFIG_BASE_ADDRESS + CONFIG_GRAVITY_COEFFICENT_OFFSET_ADDRESS);
+    printf("sandNum:%d\r\n", sandNum);
+    printf("screenBrightness:%d\r\n", screenBrightness);
+    printf("gravityCoefficent:%1.3f\r\n", gravityCoefficent / 1000.0);
+
+    MPU6050_Init();
+    MPU6050ReadID();
+
     max7219_handle led1;
     max7219_handle led2;
     led1.spiHandle = &hspi1;
@@ -109,25 +158,14 @@ int main(void)
 
     Max7219_DisplayTest(led1);
     Max7219_DisplayTest(led2);
-    HAL_Delay(1000);
-    Max7219_DisplayNromal(led1);
-    Max7219_DisplayNromal(led2);
 
-    Max7219_WriteReg(led1, 0x01, 0xFF);
-    Max7219_WriteReg(led1, 0x02, 0x7F);
-    Max7219_WriteReg(led1, 0x03, 0x3F);
-    Max7219_WriteReg(led1, 0x04, 0x1F);
-    Max7219_WriteReg(led1, 0x05, 0x0F);
-    Max7219_WriteReg(led1, 0x06, 0x07);
-    Max7219_WriteReg(led1, 0x07, 0x03);
-    Max7219_WriteReg(led1, 0x08, 0x01);
-    
-    uint8_t data[8] = {0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF};
-    for (uint8_t i = 0; i < 8; i++)
-    {
-        Max7219_WriteReg(led1, i + 1, data[i]);
-        HAL_Delay(1000);
-    }
+    Max7219_WriteReg(led1, 0x0A, 0x0f);
+    Max7219_WriteReg(led2, 0x0A, 0x0f);
+
+    HAL_Delay(100);
+
+    // Max7219_DisplayNromal(led1);
+    // Max7219_DisplayNromal(led2);
 
     // Max7219_Test(led1);
     // Max7219_Test(led2);
@@ -153,6 +191,21 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
+        short aData[3];
+        short gData[3];
+        float temp;
+        MPU6050ReadAcc(aData);
+        MPU6050ReadGyro(gData);
+        MPU6050_ReturnTemp(&temp);
+        // printf("MPU6050 Temperature:%1.3f C\r\n", temp);
+
+        printf("----------------------------------------\r\n");
+        printf("ax:%1.3f g\tgx:%1.3f deg/s\r\n", (float)aData[0] / (0xffff / 4), (float)gData[0] / (0xffff / 500));
+        printf("ay:%1.3f g\tgy:%1.3f deg/s\r\n", (float)aData[1] / (0xffff / 4), (float)gData[1] / (0xffff / 500));
+        printf("az:%1.3f g\tgz:%1.3f deg/s\r\n", (float)aData[2] / (0xffff / 4), (float)gData[2] / (0xffff / 500));
+        printf("----------------------------------------\r\n");
+
+        HAL_Delay(500);
     }
     /* USER CODE END 3 */
 }

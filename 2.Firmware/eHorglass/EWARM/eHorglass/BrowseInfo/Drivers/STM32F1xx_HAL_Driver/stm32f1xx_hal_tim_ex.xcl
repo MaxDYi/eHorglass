@@ -23,6 +23,8 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/CMSIS/Include
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/MAX7219
 -I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/MPU6050
+-I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../USB_DEVICE/App
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../USB_DEVICE/Target
@@ -48,6 +50,8 @@ E:\eHorglass\2.Firmware\eHorglass\Drivers\CMSIS\Device\ST\STM32F1xx\Include
 E:\eHorglass\2.Firmware\eHorglass\Drivers\CMSIS\Include
 -I
 E:\eHorglass\2.Firmware\eHorglass\Drivers\MAX7219
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\MPU6050
 -I
 E:\eHorglass\2.Firmware\eHorglass\USB_DEVICE\App
 -I

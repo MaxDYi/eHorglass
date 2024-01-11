@@ -51,4 +51,5 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Application\User\Co
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\gpio.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\MAX7219\MAX7219.h
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\MAX7219\MAX7219.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\MPU6050\MPU6050.h
