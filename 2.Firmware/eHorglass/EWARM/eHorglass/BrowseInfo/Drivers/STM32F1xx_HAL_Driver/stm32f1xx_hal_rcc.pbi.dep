@@ -33,4 +33,7 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Drivers\STM32F1xx_H
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_spi.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h

@@ -1436,9 +1436,6 @@
             <group>
                 <name>Core</name>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\dma.c</name>
-                </file>
-                <file>
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
                 </file>
                 <file>
@@ -1459,6 +1456,9 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
                 </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\write.c</name>
+                </file>
             </group>
         </group>
     </group>
@@ -1468,6 +1468,12 @@
             <name>CMSIS</name>
             <file>
                 <name>$PROJ_DIR$\..\Core\Src\system_stm32f1xx.c</name>
+            </file>
+        </group>
+        <group>
+            <name>MAX7219</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\MAX7219\MAX7219.c</name>
             </file>
         </group>
         <group>

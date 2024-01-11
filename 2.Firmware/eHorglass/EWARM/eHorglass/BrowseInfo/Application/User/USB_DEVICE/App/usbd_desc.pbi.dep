@@ -1,0 +1,53 @@
+E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Application\User\USB_DEVICE\App\usbd_desc.pbi: \
+  E:\eHorglass\2.Firmware\eHorglass\USB_DEVICE\App\usbd_desc.c \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\USB_DEVICE\Target\usbd_conf.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Config_Full.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\stm32f1xx_hal_conf.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Include\core_cm3.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdint.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Include\cmsis_version.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Include\cmsis_iccarm.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\aarch32\iccarm_builtin.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stddef.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_spi.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
+  E:\eHorglass\2.Firmware\eHorglass\USB_DEVICE\App\usbd_desc.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h
