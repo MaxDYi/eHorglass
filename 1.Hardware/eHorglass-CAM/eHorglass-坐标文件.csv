@@ -1,21 +1,22 @@
 Altium Designer Pick and Place Locations
-E:\eHorglass\Hardware\eHorglass-PRJ\Project Outputs for eHorglass\Pick Place for eHorglass.csv
+E:\eHorglass\1.Hardware\eHorglass-PRJ\Project Outputs for eHorglass\Pick Place for eHorglass.csv
 
 ========================================================================================================================
 File Design Information:
 
-Date:       27/12/23
-Time:       17:44
-Revision:   Not in VersionControl
+Date:       23/01/24
+Time:       22:15
+Revision:   9067077ffabd1340d0029a61b2ac5c9a32908ce7
 Variant:    No variations
 Units used: mil
 
 "Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"USBC1","TYPE-C 2.0 -16P","BottomLayer","USB-C-SMD_16P","196.850","590.551","270","USB2.0_Type-C_16Pin母座"
 "R13","4.7K","BottomLayer","R0603_M","1059.998","2545.002","315","贴片电阻"
 "R12","4.7K","BottomLayer","R0603_M","1136.575","2416.575","225","贴片电阻"
-"R11","1K","BottomLayer","R0603_M","1575.000","644.997","90","贴片电阻"
+"R11","1K","BottomLayer","R0603_M","1346.460","338.583","180","贴片电阻"
 "R10","10K","BottomLayer","R0603_M","1279.998","3305.002","315","贴片电阻"
-"LED3","RED","BottomLayer","LED0603_R","1639.998","639.997","90","贴片LED"
+"LED3","RED","BottomLayer","LED0603_R","1346.460","401.573","180","贴片LED"
 "X1","8MHz","BottomLayer","OSC-5032-2P","944.882","3464.567","225","2脚无源晶振(谐振器）"
 "R9","10K","BottomLayer","R0603_M","909.998","2950.002","315","贴片电阻"
 "C21","20pF","BottomLayer","C0603_M","1104.998","3464.998","45","贴片电容/MLCC电容"
@@ -26,24 +27,23 @@ Units used: mil
 "C5","100nF","BottomLayer","C0603_M","1374.998","3210.002","315","贴片电容/MLCC电容"
 "U1","STM32F103C8T6","BottomLayer","LQFP48_N","1102.362","3110.236","315","STM32 ARM-based 32-bit MCU Performance Line with 64 kB Flash, 20 kB Internal RAM, -40 to +85癈 Temperature, 48-Pin LQFP, Tray"
 "SW1","3x6x5","BottomLayer","SW_SMD-3*6*2.5","565.540","3418.904","135","3x6轻触开关"
-"JP1","Header 5X2","BottomLayer","HDR2.54-M-LS-2x5P","1614.173","2992.126","90","5*2P接插件"
+"JP1","Header 5X2","BottomLayer","HDR2.54-LI-2x5P","1614.173","2992.126","90","5*2P接插件"
 "C3","100nF","BottomLayer","C0603_M","651.575","3508.425","315","贴片电容/MLCC电容"
 "C4","100nF","BottomLayer","C0603_M","1014.998","3374.998","45","贴片电容/MLCC电容"
 "U5","HT7533","BottomLayer","SOT89_N","1259.842","157.480","180","LDO线性稳压芯片"
-"SP4","M3铜柱","TopLayer","M3x4+6_N","1614.173","3425.197","0","铜柱"
-"SP3","M3铜柱","TopLayer","M3x4+6_N","196.850","3425.197","0","铜柱"
-"SP2","M3铜柱","TopLayer","M3x4+6_N","1614.173","196.850","0","铜柱"
-"SP1","M3铜柱","TopLayer","M3x4+6_N","196.850","196.850","0","铜柱"
+"SP4","M3铜柱","BottomLayer","M3x10+6_N","1614.173","3425.197","180","铜柱"
+"SP3","M3铜柱","BottomLayer","M3x10+6_N","196.850","3425.197","180","铜柱"
+"SP2","M3铜柱","BottomLayer","M3x10+6_N","1614.173","196.850","180","铜柱"
+"SP1","M3铜柱","BottomLayer","M3x10+6_N","196.850","196.850","180","铜柱"
 "S1","KCD1-101","BottomLayer","HDR2.54-LI-2P","1732.284","551.181","90","1路单刀船型开关"
 "JP2","HDR-1X2","BottomLayer","XH2.54-LI-2P","531.496","157.480","180","2P接插件"
-"USB1","USB TYPE-C 6P","BottomLayer","USB-C-SMD_6P","185.042","590.551","0","USB_TYPE-C_6Pin立式母座"
 "U4","MPU6050","BottomLayer","QFN24-P50","905.512","2322.835","135","三轴加速度+三轴陀螺仪"
 "U3","MAX7219","BottomLayer","SOIC-24W","669.291","2677.165","135","8位 LED驱动器"
 "U2","MAX7219","BottomLayer","SOIC-24W","984.252","1102.362","135","8位 LED驱动器"
 "R8","5.1K","BottomLayer","R0603_M","433.074","622.047","180","贴片电阻"
 "R7","5.1K","BottomLayer","R0603_M","433.074","559.055","180","贴片电阻"
-"R6","51K","BottomLayer","R0603_M","255.908","2736.218","135","贴片电阻"
-"R5","51K","BottomLayer","R0603_M","767.714","1314.958","45","贴片电阻"
+"R6","20K","BottomLayer","R0603_M","255.908","2736.218","135","贴片电阻"
+"R5","20K","BottomLayer","R0603_M","767.714","1314.958","45","贴片电阻"
 "R4","10K","BottomLayer","R0603_M","433.071","354.327","90","贴片电阻"
 "R3","1K","BottomLayer","R0603_M","787.405","314.961","180","贴片电阻"
 "R2","10K","BottomLayer","R0603_M","1062.992","629.924","270","贴片电阻"
@@ -60,7 +60,7 @@ Units used: mil
 "C18","100nF","BottomLayer","C0603_M","433.068","685.039","0","贴片电容/MLCC电容"
 "C17","100nF","BottomLayer","C0603_M","714.998","2235.002","315","贴片电容/MLCC电容"
 "C16","100nF","BottomLayer","C0603_M","804.998","2145.002","315","贴片电容/MLCC电容"
-"C15","100nF","BottomLayer","C0603_M","1640.000","511.808","90","贴片电容/MLCC电容"
+"C15","100nF","BottomLayer","C0603_M","1220.476","338.583","180","贴片电容/MLCC电容"
 "C14","100nF","BottomLayer","C0603_M","1062.992","118.113","270","贴片电容/MLCC电容"
 "C13","10uF","BottomLayer","C0603_M","1014.998","2500.002","315","贴片电容/MLCC电容"
 "C12","10uF","BottomLayer","C0603_M","149.609","2881.892","225","贴片电容/MLCC电容"
