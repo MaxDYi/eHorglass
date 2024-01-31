@@ -35,9 +35,24 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Application\User\Co
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_spi.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\usart.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\USB_DEVICE\App\usbd_cdc_if.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\USB_DEVICE\Target\usbd_conf.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h
