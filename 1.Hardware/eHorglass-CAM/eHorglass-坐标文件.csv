@@ -4,14 +4,14 @@ E:\eHorglass\1.Hardware\eHorglass-PRJ\Project Outputs for eHorglass\Pick Place f
 ========================================================================================================================
 File Design Information:
 
-Date:       28/01/24
-Time:       16:43
-Revision:   9adaffdfee3580dc49d063affa734eb3247cbe75
+Date:       31/01/24
+Time:       16:20
+Revision:   27da52139858a800003fc1a76fb5e424f34c2e02
 Variant:    No variations
 Units used: mil
 
 "Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
-"USBC1","TYPE-C 2.0 -16P","BottomLayer","USB-C-SMD_16P","196.850","590.551","270","USB2.0_Type-C_16PinÄ¸×ù"
+"USBC1","TYPE-C 2.0 -16P","BottomLayer","USB-C-SMD_16P","181.102","590.551","270","USB2.0_Type-C_16PinÄ¸×ù"
 "R13","4.7K","BottomLayer","R0603_M","1059.998","2545.002","315","ÌùÆ¬µç×è"
 "R12","4.7K","BottomLayer","R0603_M","1136.575","2416.575","225","ÌùÆ¬µç×è"
 "R11","1K","BottomLayer","R0603_M","1346.460","338.583","180","ÌùÆ¬µç×è"
@@ -46,7 +46,7 @@ Units used: mil
 "R5","20K","BottomLayer","R0603_M","767.714","1314.958","45","ÌùÆ¬µç×è"
 "R4","10K","BottomLayer","R0603_M","433.071","354.327","90","ÌùÆ¬µç×è"
 "R3","1K","BottomLayer","R0603_M","787.405","314.961","180","ÌùÆ¬µç×è"
-"R2","10K","BottomLayer","R0603_M","1062.992","629.924","270","ÌùÆ¬µç×è"
+"R2","3K","BottomLayer","R0603_M","1062.992","629.924","270","ÌùÆ¬µç×è"
 "R1","1K","BottomLayer","R0603_M","787.405","377.953","180","ÌùÆ¬µç×è"
 "Q1","AO3401","BottomLayer","SOT23-3N","590.551","511.811","180","P¹µµÀ 30V/4.2A"
 "LED2","GREEN","BottomLayer","LED0603_G","895.000","59.053","0","ÌùÆ¬LED"

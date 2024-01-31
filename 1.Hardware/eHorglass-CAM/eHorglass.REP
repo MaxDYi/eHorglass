@@ -9,6 +9,8 @@ Generating : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
 
 Used DCodes :
     D10
@@ -22,6 +24,8 @@ Generating : Keep-Out Layer
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
 
 Used DCodes :
     D10
@@ -32,6 +36,8 @@ Generating : Bottom Overlay
       File : eHorglass.GBO
 
     Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
@@ -55,6 +61,8 @@ Generating : Bottom Paste
       File : eHorglass.GBP
 
     Adding Layer      : Bottom Paste
+
+    Adding Layer      : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
@@ -95,6 +103,8 @@ Generating : Bottom Solder
       File : eHorglass.GBS
 
     Adding Layer      : Bottom Solder
+
+    Adding Layer      : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
@@ -148,6 +158,8 @@ Generating : Top Solder
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
     Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
@@ -175,6 +187,8 @@ Generating : Top Paste
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
     Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
@@ -192,6 +206,8 @@ Generating : Top Overlay
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
 
 Used DCodes :
     D10
@@ -206,6 +222,8 @@ Generating : Bottom Layer
     Adding Layer      : Mechanical 1
 
     Adding Layer      : Multi-Layer
+
+    Adding Layer      : Mechanical 1
 
 
 Used DCodes :
@@ -257,6 +275,8 @@ Generating : GND
 
     Adding Layer      : Mechanical 1
 
+    Adding Layer      : Mechanical 1
+
     Adding Layer      : Multi-Layer
 
 
@@ -265,9 +285,9 @@ Used DCodes :
     D35
     D36
     D37
+    D38
+    D39
     D40
-    D41
-    D42
     D43
     D44
     D45
@@ -280,6 +300,8 @@ Generating : PWR
       File : eHorglass.GP1
 
     Adding Layer      : PWR
+
+    Adding Layer      : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
@@ -310,6 +332,8 @@ Generating : Top Layer
     Adding Layer      : Mechanical 1
 
     Adding Layer      : Multi-Layer
+
+    Adding Layer      : Mechanical 1
 
 
 Used DCodes :
@@ -344,6 +368,7 @@ Generating : Drill Drawing
 Used DCodes :
     D10
     D103
+    D104
 *************************************************************
 
 *************************************************************

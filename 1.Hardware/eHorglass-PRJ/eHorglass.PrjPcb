@@ -31,7 +31,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
-OutputPath=
+OutputPath=Project Outputs for eHorglass
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -112,7 +112,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LESGNBJY
 
 [Document5]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.2 - 二极管-TVS-ESD-整流桥-放电管.SchLib
@@ -129,7 +129,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DHQJEYGG
 
 [Document6]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.3 - LED发光二极管-IR二极管_接收管-光耦.SchLib
@@ -146,7 +146,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WBYAVEBV
 
 [Document7]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.4 - 三极管-场效应管-可控硅.SchLib
@@ -163,7 +163,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DWGNAPYD
 
 [Document8]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.5 - 按键_开关_蜂鸣器_电池_测试点_Mark点_铜柱.SchLib
@@ -180,26 +180,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=BSHGGOIF
 
 [Document9]
-DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.6 - 电源_音频_USB Type-C_HDMI_XT60_5557_D-SUB_RJ45_SD-TF_SIM插座.cmp
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document10]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.6 - 电源_音频_USB Type-C_HDMI_XT60_5557_D-SUB_RJ45_SD-TF_SIM插座.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -214,9 +197,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LSVNXECH
 
-[Document11]
+[Document10]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.7 - 电源类芯片.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -231,9 +214,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=XDLINDVW
 
-[Document12]
+[Document11]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.8 - 常见芯片.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -248,9 +231,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=QHAUEOTQ
 
-[Document13]
+[Document12]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\0.9 - 传感器-存储器-模块.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -265,9 +248,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PNOGYNFJ
 
-[Document14]
+[Document13]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.0 - DDR2-DDR3-LPDDR4-RMII PHY.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -282,9 +265,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=VUSNGUCS
 
-[Document15]
+[Document14]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.1 - 74系列TTL逻辑芯片.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -299,9 +282,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PYHOCTSS
 
-[Document16]
+[Document15]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.2 - CD4000系列逻辑芯片.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -316,9 +299,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=YPFFTUWP
 
-[Document17]
+[Document16]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.3 - 数码管-TFT-OLED屏.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -333,9 +316,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=OGWGFISY
 
-[Document18]
+[Document17]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.4 - 继电器-变压器.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -350,9 +333,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=NYKBMAEB
 
-[Document19]
+[Document18]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.5 - 精密运放-比较器.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -367,9 +350,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=QMEOYIRH
 
-[Document20]
+[Document19]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.6 - MAX系列芯片.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -384,9 +367,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=SYTHQGVU
 
-[Document21]
+[Document20]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.7 - WiFi天线-SMA射频座.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -401,9 +384,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LGIRKHUT
 
-[Document22]
+[Document21]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\1.8 - CH340系列编程器芯片.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -418,9 +401,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=SJPVBJSM
 
-[Document23]
+[Document22]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.0 - STM8L-STM8S-STM8AF系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -435,9 +418,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=QKXLWLHC
 
-[Document24]
+[Document23]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.1 - STM32 G0及G4系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -452,9 +435,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UFROFOQE
 
-[Document25]
+[Document24]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.3 - STM32 F0系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -469,9 +452,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=VXXDRPUO
 
-[Document26]
+[Document25]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.4 - STM32 F1系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -486,9 +469,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=AIHVGUDI
 
-[Document27]
+[Document26]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.5 - STM32 F2系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -503,9 +486,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=HGASSYDM
 
-[Document28]
+[Document27]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.6 - STM32 F3系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -520,9 +503,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JYBNKMSI
 
-[Document29]
+[Document28]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.7 - STM32 F4系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -537,9 +520,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=EEJWMNBH
 
-[Document30]
+[Document29]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\2.8 - STM32 F7及H7系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -554,9 +537,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=YADSNJTP
 
-[Document31]
+[Document30]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.0 - STM32L0-L1-L4系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -571,9 +554,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=IHOWQKIV
 
-[Document32]
+[Document31]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.1 - STM32W系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -588,9 +571,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=FQNTVIAU
 
-[Document33]
+[Document32]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.2 - NXP Cortex-M4系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -605,9 +588,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=TNMGJGJN
 
-[Document34]
+[Document33]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.3 - STC系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -622,9 +605,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LIVGDXGQ
 
-[Document35]
+[Document34]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.4 - Holtek合泰单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -639,9 +622,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UCMKHSFS
 
-[Document36]
+[Document35]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.5 - Atmel megaAVR系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -656,9 +639,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LDSIOOKI
 
-[Document37]
+[Document36]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.6 - 新塘单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -673,9 +656,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PJIWOBNV
 
-[Document38]
+[Document37]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.7 - MSP430系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -690,9 +673,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=BQYWLHPE
 
-[Document39]
+[Document38]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\3.8 - PIC系列单片机.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -707,9 +690,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=PEGEYPAW
 
-[Document40]
+[Document39]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\4.0 - OV系列CMOS图像传感器.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -724,9 +707,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DHDBHPWJ
 
-[Document41]
+[Document40]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\4.4 - ADC模数转换器件.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -741,9 +724,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WMFFRAUP
 
-[Document42]
+[Document41]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\4.5 - 电子管.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -758,9 +741,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=QIDTKAGM
 
-[Document43]
+[Document42]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\4.9 - 0.5mm连接器(FPC0.5).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -775,9 +758,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=RUYFIPPJ
 
-[Document44]
+[Document43]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.0 - 1.00mm连接器(FPC1.0_SH1.0_1.0排针排母).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -792,9 +775,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=HBPELDQV
 
-[Document45]
+[Document44]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.1 - 1.25mm连接器(FPC1.25_GH1.25_MX1.25).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -809,9 +792,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=UWUBASLH
 
-[Document46]
+[Document45]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.2 - 1.27mm连接器(1.27排针排母).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -826,9 +809,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=JFGPDXFI
 
-[Document47]
+[Document46]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.3 - 1.50mm连接器(ZH1.5).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -843,9 +826,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DVANRWSO
 
-[Document48]
+[Document47]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.4 - 2.0mm连接器(PHB2.0_PHD2.0_2.0排针排母).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -860,9 +843,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=SOAYLRUI
 
-[Document49]
+[Document48]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.5 - 2.54mm连接器(KF2EDGK_XH2.54_2.54排针排母).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -877,9 +860,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=MTKYSNSG
 
-[Document50]
+[Document49]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.6 - 3.5mm连接器(KF350-KF2EDGVHM-KF2EDGKRH-KF2EDGVM).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -894,9 +877,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GOISLAGV
 
-[Document51]
+[Document50]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.7 - 3.81mm连接器(KF128-KF2EDGVHM).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -911,9 +894,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LPBPLGVC
 
-[Document52]
+[Document51]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\5.8 - 3.96mm连接器(HT3.96).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -928,9 +911,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=EJTLJKSL
 
-[Document53]
+[Document52]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\6.0 - 5.0mm连接器(KF301-KF2EDGVHM).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -945,9 +928,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=AHDALPLI
 
-[Document54]
+[Document53]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\6.1 - 5.08mm连接器(KF128-KF2EDGK-KF2EDGVHM-5.08).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -962,9 +945,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=TSPEPTPV
 
-[Document55]
+[Document54]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\6.2 - 7.62mm连接器(KF7620).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -979,9 +962,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LVVTOMJM
 
-[Document56]
+[Document55]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\6.5 - 9.5mm连接器(KFHB9500).SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -996,9 +979,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WWVXKMRS
 
-[Document57]
+[Document56]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\7.0 - 数字符号.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1013,9 +996,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=KOCPHDQP
 
-[Document58]
+[Document57]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\原理图库\7.1 - 模拟符号.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1030,9 +1013,9 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=CAHIYIYM
 
-[Document59]
+[Document58]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.01-电阻.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1049,7 +1032,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document60]
+[Document59]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.02-电位器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1066,7 +1049,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document61]
+[Document60]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.03-电容.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1083,7 +1066,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document62]
+[Document61]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.04-电感.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1100,7 +1083,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document63]
+[Document62]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.05-直插电感、共模电感.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1117,7 +1100,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document64]
+[Document63]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.06-保险丝.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1134,7 +1117,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document65]
+[Document64]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.07-二极管、整流桥.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1151,7 +1134,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document66]
+[Document65]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.08-LED发光二极管.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1168,7 +1151,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document67]
+[Document66]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.09-晶振、晶体.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1185,7 +1168,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document68]
+[Document67]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\1.10-放电管、压敏元件.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1202,7 +1185,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document69]
+[Document68]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.00-DIP-SOP、SOIC、ESOP、TSSOP、ETSSOP封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1219,7 +1202,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document70]
+[Document69]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.01-LQFP、TQFP封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1236,7 +1219,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document71]
+[Document70]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.02-SOT封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1253,7 +1236,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document72]
+[Document71]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.03-TO-系列封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1270,7 +1253,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document73]
+[Document72]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.04-QFN-UFQFPN-VFQFPN封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1287,7 +1270,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document74]
+[Document73]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.05-DFN-WSOF封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1304,7 +1287,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document75]
+[Document74]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.06-BGA、LGA、WCSP封装、DDR~LPDDR4_Nand Flash.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1321,7 +1304,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document76]
+[Document75]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.07-MSOP封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1338,7 +1321,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document77]
+[Document76]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.08-SSOP封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1355,7 +1338,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document78]
+[Document77]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.09-传感器IC.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1372,7 +1355,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document79]
+[Document78]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.10-PLCC插槽封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1389,7 +1372,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document80]
+[Document79]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.11-SO封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1406,7 +1389,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document81]
+[Document80]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\2.12-矩形QFP封装.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1423,7 +1406,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document82]
+[Document81]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.00-电源-电池接口.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1440,7 +1423,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document83]
+[Document82]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.01-按键按钮.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1457,7 +1440,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document84]
+[Document83]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.02-拨动开关-拨码开关.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1474,7 +1457,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document85]
+[Document84]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.03-USB3.1 Type C-M.2-NGFF-HDMI-PCI-E接口.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1491,7 +1474,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document86]
+[Document85]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.04-数码管、点阵、OLED屏.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1508,7 +1491,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RAYJEQOK
 
-[Document87]
+[Document86]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.05-RJ11-RJ45-D_SUB-VGA-SCSI接口-网络变压器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1525,7 +1508,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document88]
+[Document87]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.06-蜂鸣器-音频接口.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1542,7 +1525,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document89]
+[Document88]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.07-测试点-跳线座-冷压插片.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1559,7 +1542,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document90]
+[Document89]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.08-SD、TF卡.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1576,7 +1559,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document91]
+[Document90]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.09-继电器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1593,7 +1576,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document92]
+[Document91]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.10-变压器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1610,7 +1593,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document93]
+[Document92]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.11-电路模块.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1627,7 +1610,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document94]
+[Document93]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.12-射频天线-PEX-SMA-BNC插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1644,7 +1627,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document95]
+[Document94]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.13-M3铜柱-散热片.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1661,7 +1644,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document96]
+[Document95]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\3.14-防静电-无铅标识.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1678,7 +1661,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document97]
+[Document96]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.00-BTB连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1695,7 +1678,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document98]
+[Document97]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.01-SH1.0连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1712,7 +1695,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document99]
+[Document98]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.02-1.00mm排针-排母.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1729,7 +1712,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document100]
+[Document99]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.03-1.27mm排针-排母.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1746,7 +1729,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document101]
+[Document100]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.04-2.00mm排针-排母.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1763,7 +1746,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document102]
+[Document101]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.05-2.54mm排针-排母.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1780,7 +1763,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HHGMNDRR
 
-[Document103]
+[Document102]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.06-IDC-2.54mm直插简牛插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1797,7 +1780,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document104]
+[Document103]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.07-IDC-2.54mm贴片简牛插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1814,7 +1797,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document105]
+[Document104]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.08-XH2.54连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1831,7 +1814,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document106]
+[Document105]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.09-KF-2.54连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1848,7 +1831,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document107]
+[Document106]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.10-GH1.25连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1865,7 +1848,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document108]
+[Document107]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.11-MX1.25连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1882,7 +1865,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document109]
+[Document108]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.15-ZH1.5连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1899,7 +1882,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document110]
+[Document109]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.20-PH2.0连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1916,7 +1899,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document111]
+[Document110]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.21-PHB2.0mm连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1933,7 +1916,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document112]
+[Document111]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.22-PHD2.0mm连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1950,7 +1933,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document113]
+[Document112]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.26-KF-3.5mm连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1967,7 +1950,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document114]
+[Document113]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.28-MX4.2mm 5557&5569连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1984,7 +1967,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document115]
+[Document114]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.30-KF-5.08连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2001,7 +1984,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document116]
+[Document115]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.31-HT-5.08mm弯针立式贴片插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2018,7 +2001,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document117]
+[Document116]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.32-CZ-5.08mm插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2035,7 +2018,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document118]
+[Document117]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.33-CCM-5.08mm卧式直插插座.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2052,7 +2035,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document119]
+[Document118]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.35-HT-3.96mm连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2069,7 +2052,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document120]
+[Document119]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.36-VH-3.96mm连接器.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2086,7 +2069,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document121]
+[Document120]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.49-接插件.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2103,7 +2086,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document122]
+[Document121]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.50-FPC插座-0.5mm间距.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2120,7 +2103,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document123]
+[Document122]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.51-FPC插座-1.0mm间距.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2137,7 +2120,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document124]
+[Document123]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.52-FPC插座-1.25mm间距.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2154,7 +2137,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document125]
+[Document124]
 DocumentPath=C:\Users\MDYi\Nutstore\1\AD封装库\PCB封装库\4.60-XT30-XT60-XT90-AS150动力电源接口.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -2170,6 +2153,98 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for eHorglass\Assembly Testpoint Report for eHorglass.ipc
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for eHorglass\Design Rule Check - eHorglass.html
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for eHorglass\eHorglass-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for eHorglass\eHorglass-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for eHorglass\eHorglass.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for eHorglass\eHorglass.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GG1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for eHorglass\eHorglass.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for eHorglass\eHorglass.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for eHorglass\eHorglass.REP
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for eHorglass\Pick Place for eHorglass.csv
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
@@ -2220,7 +2295,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for eHorglass
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -2485,7 +2560,7 @@ OutputDefault1=0
 Configuration1_Name1=ForceUpdateSettings
 Configuration1_Item1=False
 Configuration1_Name2=OutputConfigurationParameter1
-Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressTrailingZeroes|DocumentPath=E:\eHorglass\1.Hardware\eHorglass-PRJ\eHorglass.PcbDoc
+Configuration1_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|NumberOfDecimals=4|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Imperial|ZeroesMode=SuppressTrailingZeroes|DocumentPath=E:\eHorglass\1.Hardware\eHorglass-PRJ\eHorglass.PcbDoc
 OutputType2=Mask
 OutputName2=Solder/Paste Mask Prints
 OutputDocumentPath2=
@@ -2554,7 +2629,7 @@ OutputDefault12=0
 Configuration12_Name1=ForceUpdateSettings
 Configuration12_Item1=False
 Configuration12_Name2=OutputConfigurationParameter1
-Configuration12_Item2=AddLayersToGroup.Group_0=0|AddLayersToGroup.Group_1=1|AddLayersToGroup.Group_2=2|AddLayersToGroup.Group_3=3|AddLayersToGroup.Group_4=4|AddLayersToGroup.Group_5=5|AddLayersToGroup.Group_6=7|AddLayersToGroup.Group_7=8|AddLayersToGroup.Set_0=16908289|AddLayersToGroup.Set_1=16908289|AddLayersToGroup.Set_2=16908289|AddLayersToGroup.Set_3=16908289|AddLayersToGroup.Set_4=16908289|AddLayersToGroup.Set_5=16908289|AddLayersToGroup.Set_6=16908289|AddLayersToGroup.Set_7=16908289|AddLayersToGroups.Count=8|AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16908289~1|BoardID=DXLUSINA|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=100000000|FilmXSize=2000000000|FilmYSize=1600000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MergePadAndRegion=False|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|OutputFormat=Different|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842754~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16973837~1|PlotBoardProfile=False|PlotBoardProfileFileName= |PlotDrillDrawingLayerPair0_Backdrill=False|PlotDrillDrawingLayerPair0_Checked=True|PlotDrillDrawingLayerPair0_DrillType=Regular|PlotDrillDrawingLayerPair0_FileName= |PlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|PlotDrillDrawingLayerPair0_LowLayer=Top Layer|PlotDrillGuideLayerPair0_Backdrill=False|PlotDrillGuideLayerPair0_Checked=True|PlotDrillGuideLayerPair0_DrillType=Regular|PlotDrillGuideLayerPair0_FileName= |PlotDrillGuideLayerPair0_HighLayer=Bottom Layer|PlotDrillGuideLayerPair0_LowLayer=Top Layer|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=True|PlotUsedDrillGuideLayerPairs=True|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False|DocumentPath=E:\eHorglass\1.Hardware\eHorglass-PRJ\eHorglass.PcbDoc
+Configuration12_Item2=AddLayersToGroup.Group_0=0|AddLayersToGroup.Group_1=1|AddLayersToGroup.Group_2=2|AddLayersToGroup.Group_3=3|AddLayersToGroup.Group_4=4|AddLayersToGroup.Group_5=5|AddLayersToGroup.Group_6=7|AddLayersToGroup.Group_7=8|AddLayersToGroup.Set_0=16908289|AddLayersToGroup.Set_1=16908289|AddLayersToGroup.Set_2=16908289|AddLayersToGroup.Set_3=16908289|AddLayersToGroup.Set_4=16908289|AddLayersToGroup.Set_5=16908289|AddLayersToGroup.Set_6=16908289|AddLayersToGroup.Set_7=16908289|AddLayersToGroups.Count=8|AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16908289~1|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=100000000|FilmXSize=2000000000|FilmYSize=1600000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842754~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16973837~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=True|PlotUsedDrillGuideLayerPairs=True|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False|DocumentPath=E:\eHorglass\1.Hardware\eHorglass-PRJ\eHorglass.PcbDoc
 
 [OutputGroup6]
 Name=Report Outputs
