@@ -10,31 +10,46 @@
 #include "stdio.h"
 #include "string.h"
 
+#define MAX7219_MODE_DECODE_ADDR 0X09
+#define MAX7219_MODE_NODECODE 0X00
+#define MAX7219_MODE_DECODE 0XFF
+#define MAX7219_MODE_INTENSITY_ADDR 0X0A
+#define MAX7219_MODE_INTENSITY_1 0X00
+#define MAX7219_MODE_INTENSITY_3 0X01
+#define MAX7219_MODE_INTENSITY_5 0X02
+#define MAX7219_MODE_INTENSITY_7 0X03
+#define MAX7219_MODE_INTENSITY_9 0X04
+#define MAX7219_MODE_INTENSITY_11 0X05
+#define MAX7219_MODE_INTENSITY_13 0X06
+#define MAX7219_MODE_INTENSITY_15 0X07
+#define MAX7219_MODE_INTENSITY_17 0X08
+#define MAX7219_MODE_INTENSITY_19 0X09
+#define MAX7219_MODE_INTENSITY_21 0X0A
+#define MAX7219_MODE_INTENSITY_23 0X0B
+#define MAX7219_MODE_INTENSITY_25 0X0C
+#define MAX7219_MODE_INTENSITY_27 0X0D
+#define MAX7219_MODE_INTENSITY_29 0X0E
+#define MAX7219_MODE_INTENSITY_31 0X0F
+#define MAX7219_MODE_SCAN_LIMIT_ADDR 0X0B
+#define MAX7219_MODE_SCAN_0 0X00
+#define MAX7219_MODE_SCAN_1 0X01
+#define MAX7219_MODE_SCAN_2 0X02
+#define MAX7219_MODE_SCAN_3 0X03
+#define MAX7219_MODE_SCAN_4 0X04
+#define MAX7219_MODE_SCAN_5 0X05
+#define MAX7219_MODE_SCAN_6 0X06
+#define MAX7219_MODE_SCAN_7 0X07
+#define MAX7219_MODE_SHUTDOWN_ADDR 0X0C
+#define MAX7219_MODE_SHUTDOWN 0X00
+#define MAX7219_MODE_WORK 0X01
+#define MAX7219_MODE_DISPALY_ADDR 0X0F
 #define MAX7219_MODE_TEST 0X01
 #define MAX7219_MODE_NORMAL 0X00
 
-#define MAX7219_DUTY_CYCLE_1_32 0x00
-#define MAX7219_DUTY_CYCLE_3_32 0x01
-#define MAX7219_DUTY_CYCLE_5_32 0x02
-#define MAX7219_DUTY_CYCLE_7_32 0x03
-#define MAX7219_DUTY_CYCLE_9_32 0x04
-#define MAX7219_DUTY_CYCLE_11_32 0x05
-#define MAX7219_DUTY_CYCLE_13_32 0x06
-#define MAX7219_DUTY_CYCLE_15_32 0x07
-#define MAX7219_DUTY_CYCLE_17_32 0x08
-#define MAX7219_DUTY_CYCLE_19_32 0x09
-#define MAX7219_DUTY_CYCLE_21_32 0x0A
-#define MAX7219_DUTY_CYCLE_23_32 0x0B
-#define MAX7219_DUTY_CYCLE_25_32 0x0C
-#define MAX7219_DUTY_CYCLE_27_32 0x0D
-#define MAX7219_DUTY_CYCLE_29_32 0x0E
-#define MAX7219_DUTY_CYCLE_31_32 0x0F
-#define MAX7219_DUTY_CYCLE_MIN MAX7219_DUTY_CYCLE_1_32
-#define MAX7219_DUTY_CYCLE_MAX MAX7219_DUTY_CYCLE_31_32
 
 void Max7219_WriteReg(max7219_handle handle, uint8_t addr, uint8_t data)
 {
-    uint8_t tx_data[2] = {addr, data};
+    uint8_t tx_data[2] = { addr, data };
     HAL_GPIO_WritePin(handle.CS_GPIO, handle.CS_Pin, GPIO_PIN_RESET);
     HAL_SPI_Transmit(handle.spiHandle, tx_data, 2, 0xff);
     HAL_GPIO_WritePin(handle.CS_GPIO, handle.CS_Pin, GPIO_PIN_SET);
@@ -42,11 +57,11 @@ void Max7219_WriteReg(max7219_handle handle, uint8_t addr, uint8_t data)
 
 void Max7219_Init(max7219_handle handle)
 {
-    Max7219_WriteReg(handle, 0x09, 0x00);
-    Max7219_WriteReg(handle, 0x0a, 0x03);
-    Max7219_WriteReg(handle, 0x0b, 0x07);
-    Max7219_WriteReg(handle, 0x0c, 0x01);
-    Max7219_WriteReg(handle, 0x0f, 0x00);
+    Max7219_WriteReg(handle, MAX7219_MODE_DECODE_ADDR, MAX7219_MODE_NODECODE);
+    Max7219_WriteReg(handle, MAX7219_MODE_INTENSITY_ADDR, MAX7219_MODE_INTENSITY_17);
+    Max7219_WriteReg(handle, MAX7219_MODE_SCAN_LIMIT_ADDR, MAX7219_MODE_SCAN_7);
+    Max7219_WriteReg(handle, MAX7219_MODE_SHUTDOWN_ADDR, MAX7219_MODE_WORK);
+    Max7219_WriteReg(handle, MAX7219_MODE_DISPALY_ADDR, MAX7219_MODE_NORMAL);
     Max7219_TurnOffAll(handle);
 }
 
@@ -66,7 +81,7 @@ void Max7219_TurnOnAll(max7219_handle handle)
     }
 }
 
-void Max7219_RotateData(uint8_t direction, uint8_t *data)
+void Max7219_RotateData(uint8_t direction, uint8_t* data)
 {
     uint8_t temp[8];
 
@@ -116,7 +131,7 @@ void Max7219_RotateData(uint8_t direction, uint8_t *data)
     }
 }
 
-void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t *data)
+void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t* data)
 {
     Max7219_TurnOffAll(handle);
     if (direction > 3)
@@ -132,9 +147,9 @@ void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t *data)
     for (uint8_t i = 0; i < 8; i++)
     {
         Max7219_WriteReg(handle, i + 1, temp[i]);
-        printf("%02x\t", temp[i]);
+        //printf("%02x\t", temp[i]);
     }
-    printf("\r\n");
+    //printf("\r\n");
 }
 
 void Max7219_DisplayNromal(max7219_handle handle)

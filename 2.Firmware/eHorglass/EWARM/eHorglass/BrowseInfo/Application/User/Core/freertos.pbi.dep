@@ -70,4 +70,6 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Application\User\Co
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\MAX7219\MAX7219.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\MPU6050\MPU6050.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\i2c.h
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\i2c.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\common\common.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\LED8x8\LED8x8.h

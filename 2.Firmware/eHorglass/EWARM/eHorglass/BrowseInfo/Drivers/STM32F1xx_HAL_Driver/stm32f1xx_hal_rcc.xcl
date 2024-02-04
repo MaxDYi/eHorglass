@@ -33,6 +33,10 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/MAX7219
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/MPU6050
 -I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/LED8x8
+-I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/common
+-I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
@@ -66,6 +70,10 @@ E:\eHorglass\2.Firmware\eHorglass\Drivers\CMSIS\Include
 E:\eHorglass\2.Firmware\eHorglass\Drivers\MAX7219
 -I
 E:\eHorglass\2.Firmware\eHorglass\Drivers\MPU6050
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\LED8x8
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\common
 -I
 E:\eHorglass\2.Firmware\eHorglass\Middlewares\Third_Party\FreeRTOS\Source\include
 -I
