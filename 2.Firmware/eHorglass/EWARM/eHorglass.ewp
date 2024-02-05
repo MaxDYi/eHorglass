@@ -359,7 +359,7 @@
                     <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
                     <state>$PROJ_DIR$/../Drivers/MAX7219</state>
                     <state>$PROJ_DIR$/../Drivers/MPU6050</state>
-                    <state>$PROJ_DIR$/../Drivers/LED8x8</state>
+                    <state>$PROJ_DIR$/../Drivers/SandMove</state>
                     <state>$PROJ_DIR$/../Drivers/common</state>
                     <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/include</state>
                     <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</state>
@@ -1173,9 +1173,9 @@
             </file>
         </group>
         <group>
-            <name>LED8x8</name>
+            <name>SandMove</name>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\LED8x8\LED8x8.c</name>
+                <name>$PROJ_DIR$\..\Drivers\SandMove\SandMove.c</name>
             </file>
         </group>
         <group>

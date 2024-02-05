@@ -43,14 +43,7 @@ uint8_t GetDirection(float angle)
     }
 }
 
-uint8_t LocationIsEmpty(uint8_t x, uint8_t y, uint8_t ledScreeNum, sandInfo_s* sandInfo, uint8_t sandNum) {
-    for (uint8_t i = 0; i < sandNum; i++) {
-        if (sandInfo[i].x == x && sandInfo[i].y == y && sandInfo[i].ledScreen == ledScreeNum) {
-            return 0;
-        }
-    }
-    return 1;
-}
+
 
 uint32_t FLASH_ReadWord(uint32_t address)
 {

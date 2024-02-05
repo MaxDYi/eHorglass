@@ -1504,9 +1504,9 @@
             </file>
         </group>
         <group>
-            <name>LED8x8</name>
+            <name>SandMove</name>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\LED8x8\LED8x8.c</name>
+                <name>$PROJ_DIR$\..\Drivers\SandMove\SandMove.c</name>
             </file>
         </group>
         <group>

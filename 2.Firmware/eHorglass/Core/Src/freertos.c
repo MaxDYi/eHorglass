@@ -33,7 +33,7 @@
 #include "MAX7219.h"
 #include "MPU6050.h"
 #include "common.h"
-#include "LED8x8.h"
+#include "SandMove.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +44,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 uint8_t gDirection = 1;
-uint8_t sandNum = 3;
+uint8_t sandNum = 64;
 uint8_t ledScreen1[LED_WIDTH][LED_WIDTH];
 uint8_t ledScreen2[LED_WIDTH][LED_WIDTH];
 uint8_t ledScreenData1[LED_WIDTH];
@@ -182,7 +182,7 @@ void TaskMPU6050(void const* argument)
     MPU6050_Init();
     //MPU6050ReadID();
 
-    osDelay(100);
+    osDelay(50);
     /* Infinite loop */
     for (;;)
     {
@@ -202,7 +202,7 @@ void TaskMPU6050(void const* argument)
         float angle = radian * 180.0 / PI + MPU6050_ANGEL_OFFSET;
         gDirection = GetDirection(angle);
 
-        printf("direction:%d\tangle:%1.3f\tradian:%1.3f\r\n", gDirection, angle, radian);
+        //printf("direction:%d\tangle:%1.3f\tradian:%1.3f\r\n", gDirection, angle, radian);
         //float g = sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
         /*
         printf("----------------------------------------\r\n");
@@ -242,21 +242,22 @@ void TaskShowFrame(void const* argument)
     /* Infinite loop */
     for (;;)
     {
-        if (osSemaphoreWait(BinSem_RefreshHandle, 0) == osOK) {
-            for (uint8_t i = 0;i < LED_WIDTH;i++) {
-                uint8_t ledBuf1 = 0;
-                uint8_t ledBuf2 = 0;
-                for (uint8_t j = 0;j < LED_WIDTH;j++) {
-                    ledBuf1 = ledBuf1 + (ledScreen1[i][j] << j);
-                    ledBuf2 = ledBuf2 + (ledScreen2[i][j] << j);
-                }
-                ledScreenData1[i] = ledBuf1;
-                ledScreenData2[i] = ledBuf2;
+        //if (osSemaphoreWait(BinSem_RefreshHandle, 0) == osOK) {
+        for (uint8_t i = 0;i < LED_WIDTH;i++) {
+            uint8_t ledBuf1 = 0;
+            uint8_t ledBuf2 = 0;
+            for (uint8_t j = 0;j < LED_WIDTH;j++) {
+                ledBuf1 = ledBuf1 + (ledScreen1[i][j] << j);
+                ledBuf2 = ledBuf2 + (ledScreen2[i][j] << j);
             }
-            Max7219_Display(led1_handle, 0, ledScreenData1);
-            Max7219_Display(led2_handle, 0, ledScreenData2);
+            ledScreenData1[i] = ledBuf1;
+            ledScreenData2[i] = ledBuf2;
         }
-        //osDelay(100);
+        Max7219_Display(led1_handle, 0, ledScreenData1);
+        Max7219_Display(led2_handle, 0, ledScreenData2);
+        //}
+
+        osDelay(100);
     }
     /* USER CODE END TaskShowFrame */
 }
@@ -273,69 +274,64 @@ void TaskUpdate(void const* argument)
     /* USER CODE BEGIN TaskUpdate */
     sandInfo_s sandInfos[SAND_MAX_NUM];
     //TODO:初始化位置错误
-    SandInfoInit(sandInfos, sandNum);
+    Sand_InfoInit(sandInfos, sandNum);
     osSemaphoreRelease(BinSem_RefreshHandle);
-    int operandsX[DIRECTION_NUM] = { 1,1,0,-1,-1,-1,0,1 };
-    int operandsY[DIRECTION_NUM] = { 0,1,1,1,0,-1,-1,-1 };
+    uint8_t loopDirection = 0;
+    uint8_t index = 0;
     /* Infinite loop */
     for (;;)
     {
-        //更新沙子位置
-        for (uint8_t i = 0; i < sandNum; i++) {
-            if (sandInfos[i].ledScreen == 1 && sandInfos[i].x == (LED_WIDTH - 1) && sandInfos[i].y == (LED_WIDTH - 1) && gDirection == 1)
-            {
-                if (LocationIsEmpty(0, 0, 2, sandInfos, sandNum)) {
-                    sandInfos[i].ledScreen = 2;
-                    sandInfos[i].x = 0;
-                    sandInfos[i].y = 0;
-                    sandInfos[i].isMoved = 1;
+        while (1) {
+
+            uint8_t LeftOrRight = 0;
+            //printf("index=%d\r\n", index);
+            for (index = 0; index < sandNum; ) {
+                //printf("index = %d\r\n", index);
+                if (sandInfos[index].isMoved == 0) {    //如果没有移动过
+                    int target_x = sandInfos[index].x;
+                    int target_y = sandInfos[index].y;
+                    Sand_GetMajorTarget(&target_x, &target_y, gDirection);
+                    if (Sand_Move(target_x, target_y, sandInfos, sandNum, index) == TRUE)   //如果向正下移动成功
+                    {
+                        index = 0;
+                    }
+                    else if (Sand_TargetIsConnectDot(target_x, target_y, sandInfos[index].ledScreen) == TRUE) {  //如果向正下移动失败，检查是否连接点
+                        Sand_MoveToConnectDot(target_x, target_y, sandInfos, sandNum, index);   //如果是连接点，移动到连接点
+                        index = 0;
+                    }
+                    else {
+                        LeftOrRight = 1 - LeftOrRight;
+                        target_x = sandInfos[index].x;
+                        target_y = sandInfos[index].y;
+                        Sand_GetMinorTarget(&target_x, &target_y, gDirection, LeftOrRight);
+                        if (Sand_Move(target_x, target_y, sandInfos, sandNum, index) == TRUE) //如果向斜下移动成功
+                        {
+                            index = 0;
+                        }
+                        else {
+                            LeftOrRight = 1 - LeftOrRight;  //如果向斜下移动失败，选择另一个方向
+                            target_x = sandInfos[index].x;
+                            target_y = sandInfos[index].y;
+                            Sand_GetMinorTarget(&target_x, &target_y, gDirection, LeftOrRight);
+                            if (Sand_Move(target_x, target_y, sandInfos, sandNum, index) == TRUE)   //如果向斜下移动成功
+                            {
+                                index = 0;
+                            }
+                            else {
+                                index++;
+                            }
+                        }
+                    }
+
                 }
-                else {
-                    sandInfos[i].isMoved = 0;
+                else {  //如果移动过直接跳过
+                    index++;
                 }
             }
-            else if (sandInfos[i].ledScreen == 2 && sandInfos[i].x == 0 && sandInfos[i].y == 0 && gDirection == 5) {
-                if (LocationIsEmpty(LED_WIDTH - 1, LED_WIDTH - 1, 1, sandInfos, sandNum)) {
-                    sandInfos[i].ledScreen = 1;
-                    sandInfos[i].x = LED_WIDTH - 1;
-                    sandInfos[i].y = LED_WIDTH - 1;
-                    sandInfos[i].isMoved = 1;
-                }
-                else {
-                    sandInfos[i].isMoved = 0;
-                }
-            }
-            else {
-                uint8_t newX = sandInfos[i].x + operandsX[gDirection];
-                uint8_t newY = sandInfos[i].y + operandsY[gDirection];
-
-                if (newX >= LED_WIDTH && newY >= LED_WIDTH)
-                {
-                    newX = sandInfos[i].x;
-                    newY = sandInfos[i].y;
-                }
-                else if (newX < LED_WIDTH && newY >= LED_WIDTH)
-                {
-                    newY = sandInfos[i].y;
-                }
-                else if (newX >= LED_WIDTH && newY < LED_WIDTH)
-                {
-                    newX = sandInfos[i].x;
-                }
-                if (LocationIsEmpty(newX, newY, sandInfos[i].ledScreen, sandInfos, sandNum)) {
-                    sandInfos[i].x = newX;
-                    sandInfos[i].y = newY;
-                    sandInfos[i].isMoved = 1;
-                }
-                else {
-                    sandInfos[i].isMoved = 0;
-                }
-            }
-
-
+            loopDirection = 1 - loopDirection;
+            break;
         }
-
-        //清空显存�??
+        //清空显存
         for (uint8_t i = 0;i < LED_WIDTH;i++) {
             for (uint8_t j = 0;j < LED_WIDTH;j++) {
                 ledScreen1[i][j] = 0;
@@ -344,6 +340,7 @@ void TaskUpdate(void const* argument)
         }
         //更新显存
         for (uint8_t i = 0;i < sandNum;i++) {
+            sandInfos[i].isMoved = 0;
             if (sandInfos[i].ledScreen == 1) {
                 ledScreen1[sandInfos[i].x][sandInfos[i].y] = 1;
             }
@@ -353,7 +350,7 @@ void TaskUpdate(void const* argument)
 
         }
         osSemaphoreRelease(BinSem_RefreshHandle);
-        osDelay(500);
+        osDelay(1000);
     }
     /* USER CODE END TaskUpdate */
 }

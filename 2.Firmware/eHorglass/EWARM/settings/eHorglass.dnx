@@ -18,14 +18,14 @@
     <StLinkDriver>
         <stlinkserialNo>USB0</stlinkserialNo>
         <stlinkfoundProbes />
-        <stlinkResetStyle>0</stlinkResetStyle>
-        <stlinkResetStrategy>2</stlinkResetStrategy>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>2</stlinkResetStrategy>
     </StLinkDriver>
     <ArmDriver>
-        <EnableCache>0</EnableCache>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
+        <EnableCache>0</EnableCache>
     </ArmDriver>
     <Jet>
         <JetConnSerialNo>CMSIS-DAP-v1-MuseLab:070000814646e3390231323936373657a5a5a5a597969908</JetConnSerialNo>
@@ -37,7 +37,7 @@
         <MultiCoreRunAll>0</MultiCoreRunAll>
     </Jet>
     <DebugChecksum>
-        <Checksum>3740547521</Checksum>
+        <Checksum>515466574</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -99,13 +99,15 @@
     </SWOTraceHWSettings>
     <struct_types>
         <Fmt0>sandInfo_s-isMoved	1	0</Fmt0>
-        <Fmt1>sandInfo_s-x	3	0</Fmt1>
-        <Fmt2>sandInfo_s-y	3	0</Fmt2>
+        <Fmt1>sandInfo_s-ledScreen	1	0</Fmt1>
+        <Fmt2>sandInfo_s-x	3	0</Fmt2>
+        <Fmt3>sandInfo_s-y	3	0</Fmt3>
     </struct_types>
     <watch_formats>
         <Fmt0>{W}42:i	3	0</Fmt0>
-        <Fmt1>{W}42:j	3	0</Fmt1>
-        <Fmt2>{W}42:row	3	0</Fmt2>
+        <Fmt1>{W}42:index	3	0</Fmt1>
+        <Fmt2>{W}42:j	3	0</Fmt2>
+        <Fmt3>{W}42:row	3	0</Fmt3>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
@@ -172,8 +174,7 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Core\Src\freertos.c}.257.13" 0 0 1 "" 0 "" 0</Bp0>
-        <Count>1</Count>
+        <Count>0</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>
