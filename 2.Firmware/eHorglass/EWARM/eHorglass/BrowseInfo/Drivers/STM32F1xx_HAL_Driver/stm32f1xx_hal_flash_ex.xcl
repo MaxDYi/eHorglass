@@ -37,12 +37,6 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/SandMove
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/common
 -I
-E:\eHorglass\2.Firmware\eHorglass\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include
--I
-E:\eHorglass\2.Firmware\eHorglass\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
--I
-E:\eHorglass\2.Firmware\eHorglass\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3
--I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\aarch32
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc
@@ -74,12 +68,6 @@ E:\eHorglass\2.Firmware\eHorglass\Drivers\MPU6050
 E:\eHorglass\2.Firmware\eHorglass\Drivers\SandMove
 -I
 E:\eHorglass\2.Firmware\eHorglass\Drivers\common
--I
-E:\eHorglass\2.Firmware\eHorglass\Middlewares\Third_Party\FreeRTOS\Source\include
--I
-E:\eHorglass\2.Firmware\eHorglass\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS
--I
-E:\eHorglass\2.Firmware\eHorglass\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM3
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

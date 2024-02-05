@@ -15,10 +15,10 @@
  *
  ******************************************************************************
  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+ /* USER CODE END Header */
+ /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
+#include "adc.h"
 #include "i2c.h"
 #include "spi.h"
 #include "usart.h"
@@ -33,6 +33,8 @@
 #include "spi.h"
 #include "MAX7219.h"
 #include "MPU6050.h"
+#include "common.h"
+#include "SandMove.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +49,12 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+uint8_t gDirection = 1;
+uint8_t sandNum = 64;
+uint8_t ledScreen1[LED_WIDTH * LED_WIDTH];
+uint8_t ledScreen2[LED_WIDTH * LED_WIDTH];
+uint8_t ledScreenData1[LED_WIDTH];
+uint8_t ledScreenData2[LED_WIDTH];
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -58,7 +65,6 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -74,53 +80,127 @@ void MX_FREERTOS_Init(void);
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
+    /* USER CODE BEGIN 1 */
 
-  /* USER CODE END 1 */
+    /* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+    /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+    HAL_Init();
 
-  /* USER CODE BEGIN Init */
+    /* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+    /* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+    /* Configure the system clock */
+    SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
+    /* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+    /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_I2C1_Init();
-  MX_SPI1_Init();
-  MX_SPI2_Init();
-  MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */
+    /* Initialize all configured peripherals */
+    MX_GPIO_Init();
+    MX_I2C1_Init();
+    MX_SPI1_Init();
+    MX_SPI2_Init();
+    MX_USART1_UART_Init();
+    MX_USB_DEVICE_Init();
+    MX_ADC1_Init();
+    /* USER CODE BEGIN 2 */
+    MPU6050_Init();
+    HAL_Delay(100);
+    max7219_handle led1_handle;
+    max7219_handle led2_handle;
+    led1_handle.spiHandle = &hspi1;
+    led1_handle.CS_GPIO = LED1_CS_GPIO_Port;
+    led1_handle.CS_Pin = LED1_CS_Pin;
+    led2_handle.spiHandle = &hspi2;
+    led2_handle.CS_GPIO = LED2_CS_GPIO_Port;
+    led2_handle.CS_Pin = LED2_CS_Pin;
+    Max7219_Init(led1_handle);
+    Max7219_Init(led2_handle);
+    Max7219_DisplayNromal(led1_handle);
+    Max7219_DisplayNromal(led2_handle);
 
-  /* USER CODE END 2 */
+    srand((unsigned)time(NULL));
+    for (uint8_t i = 0;i < LED_WIDTH * LED_WIDTH;i++) {
+        ledScreen1[i] = EMPTY;
+        ledScreen2[i] = EMPTY;
+    }
+    if (Sand_GetUpLed(gDirection) == LED_SCREEN_1) {
+        for (uint8_t i = 0;i < sandNum;i++) {
+            coord xy = Sand_GetLoopCoord(i, gDirection, 0);
+            ledScreen1[xy.x * LED_WIDTH + xy.y] = FULL;
+        }
+    }
+    else {
+        for (uint8_t i = 0;i < sandNum;i++) {
+            coord xy = Sand_GetLoopCoord(i, gDirection, 0);
+            ledScreen2[xy.x * LED_WIDTH + xy.y] = FULL;
+        }
+    }
+    /* USER CODE END 2 */
 
-  /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
     while (1)
     {
-    /* USER CODE END WHILE */
+        /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-        HAL_Delay(500);
+        /* USER CODE BEGIN 3 */
+        short aData[3];
+        short gData[3];
+        MPU6050ReadAcc(aData);
+        MPU6050ReadGyro(gData);
+        float ax, ay;
+        ax = (float)aData[0] / (0xffff / 4);
+        ay = (float)aData[1] / (0xffff / 4);
+        float radian = atan2(ax, ay);
+        float angle = radian * 180.0 / PI + MPU6050_ANGEL_OFFSET;
+        gDirection = GetDirection(angle);
+
+        uint8_t upLED = Sand_GetUpLed(gDirection);
+        uint8_t downLED = Sand_GetDownLed(gDirection);
+        uint8_t* nowScreen = NULL;
+        uint8_t* nextScreen = NULL;
+        uint8_t nowLEDNum = downLED;
+        for (uint8_t i = 0;i < LED_WIDTH;i++) {
+            for (uint8_t j = 0;j < LED_WIDTH;j++) {
+                if (upLED == LED_SCREEN_1) {
+                    nowScreen = ledScreen2;
+                    nextScreen = ledScreen1;
+                }
+                else {
+                    nowScreen = ledScreen1;
+                    nextScreen = ledScreen2;
+                }
+            }
+        }
+
+        Sand_UpdateScreen(nowScreen, nextScreen, nowLEDNum, sandNum, gDirection);
+        nowLEDNum = 1 - nowLEDNum;
+        //uint8_t* tempScreen = nowScreen;
+        //nowScreen = nextScreen;
+        //nextScreen = tempScreen;
+        Sand_UpdateScreen(nextScreen, nowScreen, nowLEDNum, sandNum, gDirection);
+
+        for (uint8_t i = 0;i < LED_WIDTH;i++) {
+            uint8_t ledBuf1 = 0;
+            uint8_t ledBuf2 = 0;
+            for (uint8_t j = 0;j < LED_WIDTH;j++) {
+                ledBuf1 = ledBuf1 + (ledScreen1[i * LED_WIDTH + j] << j);
+                ledBuf2 = ledBuf2 + (ledScreen2[i * LED_WIDTH + j] << j);
+            }
+            ledScreenData1[i] = ledBuf1;
+            ledScreenData2[i] = ledBuf2;
+        }
+        Max7219_Display(led1_handle, 0, ledScreenData1);
+        Max7219_Display(led2_handle, 0, ledScreenData2);
+        HAL_Delay(50);
     }
-  /* USER CODE END 3 */
+    /* USER CODE END 3 */
 }
 
 /**
@@ -129,44 +209,45 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+    RCC_OscInitTypeDef RCC_OscInitStruct = { 0 };
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = { 0 };
+    RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
+    /** Initializes the RCC Oscillators according to the specified parameters
+    * in the RCC_OscInitTypeDef structure.
+    */
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+    RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+    RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+    RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+    {
+        Error_Handler();
+    }
 
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+    /** Initializes the CPU, AHB and APB buses clocks
+    */
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+        | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+    RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+    RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+    RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
-  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-  {
-    Error_Handler();
-  }
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC | RCC_PERIPHCLK_USB;
+    PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV4;
+    PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+    {
+        Error_Handler();
+    }
 }
 
 /* USER CODE BEGIN 4 */
@@ -174,39 +255,18 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
-  * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM4 interrupt took place, inside
-  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-  * a global variable "uwTick" used as application time base.
-  * @param  htim : TIM handle
-  * @retval None
-  */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  /* USER CODE BEGIN Callback 0 */
-
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM4) {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
-
-  /* USER CODE END Callback 1 */
-}
-
-/**
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
-        /* User can add his own implementation to report the HAL error return state */
+    /* USER CODE BEGIN Error_Handler_Debug */
+            /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
     while (1)
     {
     }
-  /* USER CODE END Error_Handler_Debug */
+    /* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT
@@ -217,11 +277,11 @@ void Error_Handler(void)
   * @param  line: assert_param error line source number
   * @retval None
   */
-void assert_failed(uint8_t *file, uint32_t line)
+void assert_failed(uint8_t* file, uint32_t line)
 {
-  /* USER CODE BEGIN 6 */
-        /* User can add his own implementation to report the file name and line number,
-           ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+    /* USER CODE BEGIN 6 */
+            /* User can add his own implementation to report the file name and line number,
+               ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+               /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

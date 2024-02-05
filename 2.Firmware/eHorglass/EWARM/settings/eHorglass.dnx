@@ -18,14 +18,14 @@
     <StLinkDriver>
         <stlinkserialNo>USB0</stlinkserialNo>
         <stlinkfoundProbes />
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>2</stlinkResetStrategy>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
     </StLinkDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <Jet>
         <JetConnSerialNo>CMSIS-DAP-v1-MuseLab:070000814646e3390231323936373657a5a5a5a597969908</JetConnSerialNo>
@@ -37,7 +37,7 @@
         <MultiCoreRunAll>0</MultiCoreRunAll>
     </Jet>
     <DebugChecksum>
-        <Checksum>515466574</Checksum>
+        <Checksum>1183055726</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -97,12 +97,10 @@
         <ITMportsLogFile>0</ITMportsLogFile>
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
-    <struct_types>
-        <Fmt0>sandInfo_s-isMoved	1	0</Fmt0>
-        <Fmt1>sandInfo_s-ledScreen	1	0</Fmt1>
-        <Fmt2>sandInfo_s-x	3	0</Fmt2>
-        <Fmt3>sandInfo_s-y	3	0</Fmt3>
-    </struct_types>
+    <array_types>
+        <Fmt0>uint8_t[64]	1	0</Fmt0>
+        <Fmt1>uint8_t[8]	1	0</Fmt1>
+    </array_types>
     <watch_formats>
         <Fmt0>{W}42:i	3	0</Fmt0>
         <Fmt1>{W}42:index	3	0</Fmt1>

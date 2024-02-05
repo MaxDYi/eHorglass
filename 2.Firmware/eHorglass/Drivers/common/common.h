@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2024-02-04 16:37:57
- * @LastEditTime : 2024-02-05 12:57:45
+ * @LastEditTime : 2024-02-05 18:50:42
  * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\common\common.h
  */
 #ifndef __COMMON_H__
@@ -17,15 +17,12 @@
 
 #define TRUE 1
 #define FALSE 0
+#define true 1
+#define false 0
 
 #define PI 3.14159265
 
-#define LED_WIDTH 8
-#define SAND_MAX_NUM (LED_WIDTH*LED_WIDTH)
-
 #define DIRECTION_NUM 8
-
-
 
 #define MPU6050_ANGEL_OFFSET 1.0
 
