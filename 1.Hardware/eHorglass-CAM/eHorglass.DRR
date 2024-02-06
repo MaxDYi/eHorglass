@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: eHorglass.PcbDoc   2024/2/5  10:50:22
+NCDrill File Report For: eHorglass.PcbDoc   2024/2/6  14:04:45
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,7 +8,7 @@ ASCII SlotHoles File : eHorglass-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      12mil (0.305mm)                                           Round             93        PTH        15.98inch (405.96mm)
+T1      12mil (0.305mm)                                           Round             93        PTH        16.51inch (419.39mm)
 T2      28mil (0.701mm)                                           Slot              2         PTH        0.80inch (20.27mm)
 T3      32mil (0.8mm)                                             Slot              2         PTH        0.77inch (19.64mm)
 T4      35mil (0.899mm)                                           Round             14        PTH        4.49inch (114.12mm)
