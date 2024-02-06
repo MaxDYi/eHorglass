@@ -2,9 +2,8 @@
 
 
 coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
-    direction = direction % 8;
     coord xy;
-    switch (direction)
+    switch (direction % 8)
     {
     case (0): {
         int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
@@ -22,49 +21,52 @@ coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
         break;
     }
     case (1): {
-        if (randNum == 0) {
-            int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
+        int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
+           {7,7},
+           {6,7},{7,6},
+           {5,7},{6,6},{7,5},
+           {4,7},{5,6},{6,5},{7,4},
+           {3,7},{4,6},{5,5},{6,4},{7,3},
+           {2,7},{3,6},{4,5},{5,4},{6,3},{7,2},
+           {1,7},{2,6},{3,5},{4,4},{5,3},{6,2},{7,1},
+           {0,7},{1,6},{2,5},{3,4},{4,3},{5,2},{6,1},{7,0},
+           {0,6},{1,5},{2,4},{3,3},{4,2},{5,1},{6,0},
+           {0,5},{1,4},{2,3},{3,2},{4,1},{5,0},
+           {0,4},{1,3},{2,2},{3,1},{4,0},
+           {0,3},{1,2},{2,1},{3,0},
+           {0,2},{1,1},{2,0},
+           {0,1},{1,0},
+           {0,0}
+        };
+        /*
+        int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
             {7,7},
             {6,7},{7,6},
-            {5,7},{6,6},{7,5},
-            {4,7},{5,6},{6,5},{7,4},
-            {3,7},{4,6},{5,5},{6,4},{7,3},
-            {2,7},{3,6},{4,5},{5,4},{6,3},{7,2},
-            {1,7},{2,6},{3,5},{4,4},{5,3},{6,2},{7,1},
-            {0,7},{1,6},{2,5},{3,4},{4,3},{5,2},{6,1},{7,0},
-            {0,6},{1,5},{2,4},{3,3},{4,2},{5,1},{6,0},
-            {0,5},{1,4},{2,3},{3,2},{4,1},{5,0},
-            {0,4},{1,3},{2,2},{3,1},{4,0},
-            {0,3},{1,2},{2,1},{3,0},
-            {0,2},{1,1},{2,0},
+            {6,6},{5,7},{7,5},
+            {5,6},{6,5},{4,7},{7,4},
+            {5,5},{4,6},{6,4},{3,7},{7,3},
+            {4,5},{5,4},{3,6},{6,3},{2,7},{7,2},
+            {4,4},{3,5},{5,3},{2,6},{6,2},{1,7},{7,1},
+            {3,4},{4,3},{2,5},{5,2},{1,6},{6,1},{0,7},{7,0},
+            {3,3},{2,4},{4,2},{1,5},{5,1},{0,6},{6,0},
+            {2,3},{3,2},{1,4},{4,1},{0,5},{5,0},
+            {2,2},{1,3},{3,1},{0,4},{4,0},
+            {1,2},{2,1},{0,3},{3,0},
+            {1,1},{0,2},{2,0},
             {0,1},{1,0},
             {0,0}
-            };
+        };
+        */
+        if (randNum == 0) {
             xy.x = loopCoords[index][0];
             xy.y = loopCoords[index][1];
         }
         else {
-            int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
-            {7,7},
-            {7,6},{6,7},
-            {7,5},{6,6},{5,7},
-            {7,4},{6,5},{5,6},{4,7},
-            {7,3},{6,4},{5,5},{4,6},{3,7},
-            {7,2},{6,3},{5,4},{4,5},{3,6},{2,7},
-            {7,1},{6,2},{5,3},{4,4},{3,5},{2,6},{1,7},
-            {7,0},{6,1},{5,2},{4,3},{3,4},{2,5},{1,6},{0,7},
-            {6,0},{5,1},{4,2},{3,3},{2,4},{1,5},{0,6},
-            {5,0},{4,1},{3,2},{2,3},{1,4},{0,5},
-            {4,0},{3,1},{2,2},{1,3},{0,4},
-            {3,0},{2,1},{1,2},{0,3},
-            {2,0},{1,1},{0,2},
-            {1,0},{0,1},
-            {0,0}
-            };
-            xy.x = loopCoords[index][0];
-            xy.y = loopCoords[index][1];
+            xy.x = loopCoords[index][1];
+            xy.y = loopCoords[index][0];
         }
         break;
+
     }
     case (2): {
         int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
@@ -83,25 +85,50 @@ coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
         break;
     }
     case (3): {
+        /*
         int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
-            {0,7},
-            {1,7},{0,6},
-            {2,7},{1,6},{0,5},
-            {3,7},{2,6},{1,5},{0,4},
-            {4,7},{3,6},{2,5},{1,4},{0,3},
-            {5,7},{4,6},{3,5},{2,4},{1,3},{0,2},
-            {6,7},{5,6},{4,5},{3,4},{2,3},{1,2},{0,1},
-            {7,7},{6,6},{5,5},{4,4},{3,3},{2,2},{1,1},{0,0},
-            {7,6},{6,5},{5,4},{4,3},{3,2},{2,1},{1,0},
-            {7,5},{6,4},{5,3},{4,2},{3,1},{2,0},
-            {7,4},{6,3},{5,2},{4,1},{3,0},
-            {7,3},{6,2},{5,1},{4,0},
-            {7,2},{6,1},{5,0},
-            {7,1},{6,0},
-            {7,0}
+           {0,7},
+           {1,7},{0,6},
+           {1,6},{2,7},{0,5},
+           {2,6},{1,5},{3,7},{0,4},
+           {2,5},{3,6},{1,4},{4,7},{0,3},
+           {3,5},{4,6},{2,4},{1,3},{5,7},{0,2},
+           {3,4},{4,5},{2,3},{5,6},{1,2},{6,7},{0,1},
+           {4,4},{3,3},{5,5},{2,2},{6,6},{1,1},{7,7},{0,0},
+           {4,3},{5,4},{3,2},{6,5},{2,1},{7,6},{1,0},
+           {5,3},{4,2},{6,4},{3,1},{7,5},{2,0},
+           {5,2},{6,3},{4,1},{7,4},{3,0},
+           {5,1},{6,2},{7,3},{4,0},
+           {6,1},{7,2},{5,0},
+           {7,1},{6,0},
+           {7,0},
         };
-        xy.x = loopCoords[index][0];
-        xy.y = loopCoords[index][1];
+        */
+        int loopCoords[LED_WIDTH * LED_WIDTH][2] = {
+             {0,7},
+             {1,7},{0,6},
+             {2,7},{1,6},{0,5},
+             {3,7},{2,6},{1,5},{0,4},
+             {4,7},{3,6},{2,5},{1,4},{0,3},
+             {5,7},{4,6},{3,5},{2,4},{1,3},{0,2},
+             {6,7},{5,6},{4,5},{3,4},{2,3},{1,2},{0,1},
+             {7,7},{6,6},{5,5},{4,4},{3,3},{2,2},{1,1},{0,0},
+             {7,6},{6,5},{5,4},{4,3},{3,2},{2,1},{1,0},
+             {7,5},{6,4},{5,3},{4,2},{3,1},{2,0},
+             {7,4},{6,3},{5,2},{4,1},{3,0},
+             {7,3},{6,2},{5,1},{4,0},
+             {7,2},{6,1},{5,0},
+             {7,1},{6,0},
+             {7,0}
+        };
+        if (randNum == 0) {
+            xy.x = loopCoords[index][0];
+            xy.y = loopCoords[index][1];
+        }
+        else {
+            xy.x = loopCoords[index][1];
+            xy.y = loopCoords[index][0];
+        }
         break;
     }
     case (4): {
@@ -137,8 +164,14 @@ coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
             {7,6},{6,7},
             {7,7}
         };
-        xy.x = loopCoords[index][0];
-        xy.y = loopCoords[index][1];
+        if (randNum == 0) {
+            xy.x = loopCoords[index][0];
+            xy.y = loopCoords[index][1];
+        }
+        else {
+            xy.x = loopCoords[index][1];
+            xy.y = loopCoords[index][0];
+        }
         break;
     }
     case (6): {
@@ -174,8 +207,14 @@ coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
             {0,6},{1,7},
             {0,7}
         };
-        xy.x = loopCoords[index][0];
-        xy.y = loopCoords[index][1];
+        if (randNum == 0) {
+            xy.x = loopCoords[index][0];
+            xy.y = loopCoords[index][1];
+        }
+        else {
+            xy.x = loopCoords[index][1];
+            xy.y = loopCoords[index][0];
+        }
         break;
     }
     }
@@ -278,11 +317,11 @@ uint8_t Sand_TargetIsEmpty(coord target_xy, uint8_t nowLEDNum, uint8_t direction
             target_xy.x = LED_WIDTH - 1;
             target_xy.y = LED_WIDTH - 1;
         }
-        else{
-            
+        else {
+
         }
 
-        printf("targetX:%d\ttargetY:%d\r\n", target_xy.x, target_xy.y);
+        //printf("targetX:%d\ttargetY:%d\r\n", target_xy.x, target_xy.y);
         uint8_t targetEmpty = Sand_TargetIsEmpty(target_xy, 1 - nowLEDNum, direction, next_screen, now_screen);
         if (targetEmpty == FULL) {
             return FULL;
@@ -312,8 +351,8 @@ void Sand_MoveToTarget(coord now_xy, coord target_xy, uint8_t direction, uint8_t
     //printf("targetX:%d\ttargetY:%d\r\n", target_xy.x, target_xy.y);
     uint8_t upLED = Sand_GetUpLed(direction);
     if (Sand_IsDownVertex(target_xy, direction) && nowLEDNum == upLED) {
-        target_xy.x = LED_WIDTH - target_xy.x;
-        target_xy.y = LED_WIDTH - target_xy.y;
+        target_xy.x = (target_xy.x + LED_WIDTH) % LED_WIDTH;
+        target_xy.y = (target_xy.y + LED_WIDTH) % LED_WIDTH;
         now_screen[now_xy.x * LED_WIDTH + now_xy.y] = 0;
         next_screen[target_xy.x * LED_WIDTH + target_xy.y] = 1;
     }
@@ -343,7 +382,6 @@ void Sand_UpdateScreen(uint8_t* nowScreen, uint8_t* nextScreen, uint8_t nowLEDNu
                 Sand_MoveToTarget(now_xy, target_xy[RIGHT], gDirection, nowLEDNum, nowScreen, nextScreen);
             }
             else if ((leftEmpty == EMPTY) && (rightEmpty == EMPTY)) {
-                //uint8_t randNum = rand() % 2;
                 if (randNum == 0) {
                     Sand_MoveToTarget(now_xy, target_xy[LEFT], gDirection, nowLEDNum, nowScreen, nextScreen);
                 }

@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2024-02-04 16:37:57
- * @LastEditTime : 2024-02-05 18:50:42
+ * @LastEditTime : 2024-02-06 10:02:31
  * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\common\common.h
  */
 #ifndef __COMMON_H__
@@ -26,9 +26,7 @@
 
 #define MPU6050_ANGEL_OFFSET 1.0
 
-uint8_t DataInRange(float data, float mid, float range);
 
-uint8_t GetDirection(float angle);
 
 uint32_t FLASH_ReadWord(uint32_t address);
 

@@ -25,16 +25,16 @@
 #define MPU6050_WRITE 0xD0
 #define MPU6050_READ 0xD1
 
-/**
- * @brief   写数据到MPU6050寄存器
- * @param
- * @retval
- */
+ /**
+  * @brief   写数据到MPU6050寄存器
+  * @param
+  * @retval
+  */
 void MPU6050_WriteReg(uint8_t reg_add, uint8_t reg_dat)
 {
     // I2C_ByteWrite(reg_dat, reg_add);
     HAL_I2C_Mem_Write(&I2C_MPU6050, MPU6050_WRITE,
-                      reg_add, I2C_MEMADD_SIZE_8BIT, &reg_dat, 1, 0x1f);
+        reg_add, I2C_MEMADD_SIZE_8BIT, &reg_dat, 1, 0x1f);
 }
 
 /**
@@ -42,11 +42,11 @@ void MPU6050_WriteReg(uint8_t reg_add, uint8_t reg_dat)
  * @param
  * @retval
  */
-void MPU6050_ReadData(uint8_t reg_add, uint8_t *Read, uint8_t num)
+void MPU6050_ReadData(uint8_t reg_add, uint8_t* Read, uint8_t num)
 {
     // I2C_BufferRead(Read, reg_add, num);
     HAL_I2C_Mem_Read(&I2C_MPU6050, MPU6050_READ,
-                     reg_add, I2C_MEMADD_SIZE_8BIT, Read, num, 0xffff);
+        reg_add, I2C_MEMADD_SIZE_8BIT, Read, num, 0xff);
 }
 
 /**
@@ -94,7 +94,7 @@ uint8_t MPU6050ReadID(void)
  * @param
  * @retval
  */
-void MPU6050ReadAcc(short *accData)
+void MPU6050ReadAcc(short* accData)
 {
     uint8_t buf[6];
     MPU6050_ReadData(MPU6050_ACC_OUT, buf, 6);
@@ -108,7 +108,7 @@ void MPU6050ReadAcc(short *accData)
  * @param
  * @retval
  */
-void MPU6050ReadGyro(short *gyroData)
+void MPU6050ReadGyro(short* gyroData)
 {
     uint8_t buf[6];
     MPU6050_ReadData(MPU6050_GYRO_OUT, buf, 6);
@@ -122,7 +122,7 @@ void MPU6050ReadGyro(short *gyroData)
  * @param
  * @retval
  */
-void MPU6050ReadTemp(short *tempData)
+void MPU6050ReadTemp(short* tempData)
 {
     uint8_t buf[2];
     MPU6050_ReadData(MPU6050_RA_TEMP_OUT_H, buf, 2); // 读取温度值
@@ -134,7 +134,7 @@ void MPU6050ReadTemp(short *tempData)
  * @param
  * @retval
  */
-void MPU6050_ReturnTemp(float *Temperature)
+void MPU6050_ReturnTemp(float* Temperature)
 {
     short temp3;
     uint8_t buf[2];
@@ -142,4 +142,65 @@ void MPU6050_ReturnTemp(float *Temperature)
     MPU6050_ReadData(MPU6050_RA_TEMP_OUT_H, buf, 2); // 读取温度值
     temp3 = (buf[0] << 8) | buf[1];
     *Temperature = ((double)temp3 / 340.0) + 36.53;
+}
+
+/**
+ * @brief   读取MPU6050角度方式（忽略z轴）
+ * @param
+ * @retval
+ */
+uint8_t MPU6050_GetDirection(float angelOffset) {
+    short aData[3];
+    MPU6050ReadAcc(aData);
+    float ax, ay;
+    ax = (float)aData[0] / (0xffff / 4);
+    ay = (float)aData[1] / (0xffff / 4);
+    float radian = atan2(ax, ay);
+    float angle = radian * 180.0 / 3.14159265 + angelOffset;
+    uint8_t gDirection = 0;
+    if (DataInRange(angle, 90, 22.5)) {
+        gDirection = 0;
+    }
+    else if (DataInRange(angle, 45, 22.5)) {
+        gDirection = 1;
+    }
+    else if (DataInRange(angle, 0, 22.5)) {
+        gDirection = 2;
+    }
+    else if (DataInRange(angle, -45, 22.5)) {
+        gDirection = 3;
+    }
+    else if (DataInRange(angle, -90, 22.5)) {
+        gDirection = 4;
+    }
+    else if (DataInRange(angle, -135, 22.5)) {
+        gDirection = 5;
+    }
+    else if (DataInRange(angle, 180, 22.5)) {
+        gDirection = 6;
+    }
+    else if (DataInRange(angle, 135, 22.5)) {
+        gDirection = 7;
+    }
+    else {
+        gDirection = 8;
+    }
+    return gDirection;
+}
+
+/**
+ * @brief   数据是否在范围内
+ * @param
+ * @retval
+ */
+uint8_t DataInRange(float data, float mid, float range)
+{
+    if (data >= mid - range && data <= mid + range)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }

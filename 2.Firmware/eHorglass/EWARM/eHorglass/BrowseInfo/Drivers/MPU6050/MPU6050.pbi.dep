@@ -30,8 +30,6 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Drivers\MPU6050\MPU
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_adc.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_adc_ex.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h \
@@ -41,10 +39,12 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM\eHorglass\BrowseInfo\Drivers\MPU6050\MPU
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h \
   E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\i2c.h \
-  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdio.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\stdlib.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\math.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_float_setup.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\i2c.h \
+  E:\eHorglass\2.Firmware\eHorglass\EWARM\..\Core\Inc\main.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\string.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\DLib_Product_string.h

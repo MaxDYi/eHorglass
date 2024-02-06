@@ -1,16 +1,18 @@
 #ifndef __MPU6050_H__
 #define __MPU6050_H__
 #include "main.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "math.h"
 #include "i2c.h"
 
-// ģ���A0���Ž�GND��IIC��7λ��ַΪ0x68�����ӵ�VCC����Ҫ��Ϊ0x69
-#define MPU6050_SLAVE_ADDRESS (0x68 << 1) // MPU6050��������ַ
+#define MPU6050_SLAVE_ADDRESS (0x68 << 1) 
 
 #define MPU6050_WHO_AM_I 0x75
 #define MPU6050_SMPLRT_DIV 0 // 8000Hz
 #define MPU6050_DLPF_CFG 0
-#define MPU6050_GYRO_OUT 0x43 // MPU6050���������ݼĴ�����ַ
-#define MPU6050_ACC_OUT 0x3B  // MPU6050���ٶ����ݼĴ�����ַ
+#define MPU6050_GYRO_OUT 0x43 
+#define MPU6050_ACC_OUT 0x3B 
 
 #define MPU6050_ADDRESS_AD0_LOW 0x68  // address pin low (GND), default for InvenSense evaluation board
 #define MPU6050_ADDRESS_AD0_HIGH 0x69 // address pin high (VCC)
@@ -366,15 +368,17 @@
 #define MPU6050_DMP_MEMORY_BANK_SIZE 256
 #define MPU6050_DMP_MEMORY_CHUNK_SIZE 16
 
-void MPU6050ReadTemp(short *tempData);
-void MPU6050ReadGyro(short *gyroData);
-void MPU6050ReadAcc(short *accData);
-void MPU6050_ReturnTemp(float *Temperature);
+void MPU6050ReadTemp(short* tempData);
+void MPU6050ReadGyro(short* gyroData);
+void MPU6050ReadAcc(short* accData);
+void MPU6050_ReturnTemp(float* Temperature);
 void MPU6050_Init(void);
 uint8_t MPU6050ReadID(void);
-void PMU6050_ReadData(uint8_t reg_add, uint8_t *Read, uint8_t num);
+void PMU6050_ReadData(uint8_t reg_add, uint8_t* Read, uint8_t num);
 void PMU6050_WriteReg(uint8_t reg_add, uint8_t reg_dat);
 
-void MPU6050_PWR_MGMT_1_INIT(void);
+uint8_t MPU6050_GetDirection(float angelOffset);
+
+uint8_t DataInRange(float data, float mid, float range);
 
 #endif /*__MPU6050*/

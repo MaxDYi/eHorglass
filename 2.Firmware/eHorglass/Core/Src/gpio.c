@@ -38,6 +38,7 @@
         * Output
         * EVENT_OUT
         * EXTI
+     PA1   ------> ADCx_IN1
 */
 void MX_GPIO_Init(void)
 {
@@ -54,6 +55,11 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED2_CS_GPIO_Port, LED2_CS_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PA1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = LED1_CS_Pin;
