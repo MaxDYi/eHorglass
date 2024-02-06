@@ -1,6 +1,13 @@
 #include "SandMove.h"
 
-
+/**
+ * @description    : 根据方向不同设置点阵遍历方式
+ * @author         : MaxDYi
+ * @param           {uint8_t} index
+ * @param           {uint8_t} direction
+ * @param           {uint8_t} randNum
+ * @return          {*}
+ */
 coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
     coord xy;
     switch (direction % 8)
@@ -221,6 +228,15 @@ coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum) {
     return xy;
 }
 
+
+/**
+ * @description    : 获取中下-左下-右下三个目标点位置
+ * @author         : MaxDYi
+ * @param           {coord} now_xy
+ * @param           {coord*} target_xy
+ * @param           {uint8_t} direction
+ * @return          {*}
+ */
 void Sand_GetTarget(coord now_xy, coord* target_xy, uint8_t direction) {
     int operandsX[DIRECTION_NUM] = { 1,1,0,-1,-1,-1,0,1 };
     int operandsY[DIRECTION_NUM] = { 0,1,1,1,0,-1,-1,-1 };
@@ -232,6 +248,12 @@ void Sand_GetTarget(coord now_xy, coord* target_xy, uint8_t direction) {
     target_xy[RIGHT].y = now_xy.y + operandsY[(direction - 1) % 8];
 }
 
+/**
+ * @description    : 获取当前在上方的点阵屏序号
+ * @author         : MaxDYi
+ * @param           {uint8_t} gDirection
+ * @return          {*}
+ */
 uint8_t Sand_GetUpLed(uint8_t gDirection) {
     if (gDirection < DIRECTION_NUM / 2) {
         return LED_SCREEN_1;
@@ -241,6 +263,12 @@ uint8_t Sand_GetUpLed(uint8_t gDirection) {
     }
 }
 
+/**
+ * @description    : 获取当前在下方的点阵屏序号
+ * @author         : MaxDYi
+ * @param           {uint8_t} gDirection
+ * @return          {*}
+ */
 uint8_t Sand_GetDownLed(uint8_t gDirection) {
     if (gDirection < DIRECTION_NUM / 2) {
         return LED_SCREEN_2;
@@ -250,6 +278,12 @@ uint8_t Sand_GetDownLed(uint8_t gDirection) {
     }
 }
 
+/**
+ * @description    : 检测该点是否为边框点
+ * @author         : MaxDYi
+ * @param           {int} x
+ * @return          {*}
+ */
 uint8_t Sand_IsBorder(int x) {
     if (x < 0 || x>LED_WIDTH - 1) {
         return OUT;
@@ -259,6 +293,12 @@ uint8_t Sand_IsBorder(int x) {
     }
 }
 
+/**
+ * @description    : 检测该点是否为点阵顶点
+ * @param           {coord} target_xy
+ * @param           {uint8_t} direction
+ * @return          {*}
+ */
 uint8_t Sand_IsVertex(coord target_xy, uint8_t direction) {
     if (Sand_IsUpVertex(target_xy, direction) == TRUE || Sand_IsDownVertex(target_xy, direction) == TRUE) {
         return TRUE;
@@ -268,6 +308,12 @@ uint8_t Sand_IsVertex(coord target_xy, uint8_t direction) {
     }
 }
 
+/**
+ * @description    : 检测该点是否为点阵上方顶点
+ * @param           {coord} target_xy
+ * @param           {uint8_t} direction
+ * @return          {*}
+ */
 uint8_t Sand_IsDownVertex(coord target_xy, uint8_t direction) {
     if ((direction < DIRECTION_NUM / 2)) {
         if (target_xy.x == LED_WIDTH && target_xy.y == LED_WIDTH) {
@@ -287,6 +333,12 @@ uint8_t Sand_IsDownVertex(coord target_xy, uint8_t direction) {
     }
 }
 
+/**
+ * @description    : 检测该点是否为点阵下方顶点
+ * @param           {coord} target_xy
+ * @param           {uint8_t} direction
+ * @return          {*}
+ */
 uint8_t Sand_IsUpVertex(coord target_xy, uint8_t direction) {
     if ((direction < DIRECTION_NUM / 2)) {
         if (target_xy.x == -1 && target_xy.y == -1) {
@@ -306,6 +358,17 @@ uint8_t Sand_IsUpVertex(coord target_xy, uint8_t direction) {
     }
 }
 
+
+/**
+ * @description    : 检测目标点是否为空
+ * @author         : MaxDYi
+ * @param           {coord} target_xy
+ * @param           {uint8_t} nowLEDNum
+ * @param           {uint8_t} direction
+ * @param           {uint8_t*} now_screen
+ * @param           {uint8_t*} next_screen
+ * @return          {*}
+ */
 uint8_t Sand_TargetIsEmpty(coord target_xy, uint8_t nowLEDNum, uint8_t direction, uint8_t* now_screen, uint8_t* next_screen) {
     uint8_t upLED = Sand_GetUpLed(direction);
     if (Sand_IsDownVertex(target_xy, direction) && nowLEDNum == upLED) {
@@ -347,6 +410,17 @@ uint8_t Sand_TargetIsEmpty(coord target_xy, uint8_t nowLEDNum, uint8_t direction
     }
 }
 
+/**
+ * @description    : 移动当前点到目标点
+ * @author         : MaxDYi
+ * @param           {coord} now_xy
+ * @param           {coord} target_xy
+ * @param           {uint8_t} direction
+ * @param           {uint8_t} nowLEDNum
+ * @param           {uint8_t*} now_screen
+ * @param           {uint8_t*} next_screen
+ * @return          {*}
+ */
 void Sand_MoveToTarget(coord now_xy, coord target_xy, uint8_t direction, uint8_t nowLEDNum, uint8_t* now_screen, uint8_t* next_screen) {
     //printf("targetX:%d\ttargetY:%d\r\n", target_xy.x, target_xy.y);
     uint8_t upLED = Sand_GetUpLed(direction);
@@ -362,6 +436,15 @@ void Sand_MoveToTarget(coord now_xy, coord target_xy, uint8_t direction, uint8_t
     }
 }
 
+/**
+ * @description    : 更新点阵屏幕状态
+ * @param           {uint8_t*} nowScreen
+ * @param           {uint8_t*} nextScreen
+ * @param           {uint8_t} nowLEDNum
+ * @param           {uint8_t} sandNum
+ * @param           {uint8_t} gDirection
+ * @return          {*}
+ */
 void Sand_UpdateScreen(uint8_t* nowScreen, uint8_t* nextScreen, uint8_t nowLEDNum, uint8_t sandNum, uint8_t gDirection) {
     uint8_t randNum = rand() % 2;
     for (uint8_t i = 0;i < LED_WIDTH * LED_WIDTH;i++) {
