@@ -1,7 +1,9 @@
 #include "common.h"
 
-uint32_t FLASH_ReadWord(uint32_t address)
+void swap(int* a, int* b)
 {
-    return *(__IO uint32_t*)address;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 

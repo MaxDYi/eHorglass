@@ -37,6 +37,12 @@ E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/SandMove
 -I
 E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/common
 -I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/AT
+-I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/Runtime
+-I
+E:\eHorglass\2.Firmware\eHorglass\EWARM/../Drivers/Parameter
+-I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\aarch32
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc
@@ -68,6 +74,12 @@ E:\eHorglass\2.Firmware\eHorglass\Drivers\MPU6050
 E:\eHorglass\2.Firmware\eHorglass\Drivers\SandMove
 -I
 E:\eHorglass\2.Firmware\eHorglass\Drivers\common
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\AT
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\Runtime
+-I
+E:\eHorglass\2.Firmware\eHorglass\Drivers\Parameter
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

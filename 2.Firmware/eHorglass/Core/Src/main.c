@@ -18,8 +18,10 @@
  /* USER CODE END Header */
  /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "i2c.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
@@ -34,6 +36,9 @@
 #include "MPU6050.h"
 #include "common.h"
 #include "SandMove.h"
+#include "Runtime.h"
+#include "AT.h"
+#include "Parameter.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,8 +53,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-uint8_t gDirection = 1;
-uint8_t sandNum = 64;
+struct parameters runPara;
 uint8_t ledScreen1[LED_WIDTH * LED_WIDTH];
 uint8_t ledScreen2[LED_WIDTH * LED_WIDTH];
 uint8_t ledScreenData1[LED_WIDTH];
@@ -106,7 +110,16 @@ int main(void)
     MX_SPI2_Init();
     MX_USART1_UART_Init();
     MX_USB_DEVICE_Init();
+    MX_ADC1_Init();
+    MX_TIM3_Init();
     /* USER CODE BEGIN 2 */
+    uint8_t gDirection;
+    LoadParameters(&runPara);
+    Runtime_Init();
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1, 50);
+    uint16_t ADC_vaule = HAL_ADC_GetValue(&hadc1);
+    srand(ADC_vaule);
     MPU6050_Init();
     HAL_Delay(100);
     gDirection = MPU6050_GetDirection(1);
@@ -129,14 +142,14 @@ int main(void)
         ledScreen2[i] = EMPTY;
     }
     if (Sand_GetUpLed(gDirection) == LED_SCREEN_1) {
-        for (uint8_t i = 0;i < sandNum;i++) {
-            coord xy = Sand_GetLoopCoord(i, gDirection, 0);
+        for (uint8_t i = 0;i < runPara.sandNum;i++) {
+            coord xy = Sand_GetLoopCoord(i, gDirection, LEFT);
             ledScreen1[xy.x * LED_WIDTH + xy.y] = FULL;
         }
     }
     else {
-        for (uint8_t i = 0;i < sandNum;i++) {
-            coord xy = Sand_GetLoopCoord(i, gDirection, 0);
+        for (uint8_t i = 0;i < runPara.sandNum;i++) {
+            coord xy = Sand_GetLoopCoord(i, gDirection, LEFT);
             ledScreen2[xy.x * LED_WIDTH + xy.y] = FULL;
         }
     }
@@ -149,6 +162,9 @@ int main(void)
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
+
+        Runtime_Start();
+
         gDirection = MPU6050_GetDirection(1);
 
         uint8_t upLED = Sand_GetUpLed(gDirection);
@@ -169,9 +185,9 @@ int main(void)
             }
         }
 
-        Sand_UpdateScreen(nowScreen, nextScreen, nowLEDNum, sandNum, gDirection);
+        Sand_UpdateScreen(nowScreen, nextScreen, nowLEDNum, runPara.sandNum, gDirection);
         nowLEDNum = 1 - nowLEDNum;
-        Sand_UpdateScreen(nextScreen, nowScreen, nowLEDNum, sandNum, gDirection);
+        Sand_UpdateScreen(nextScreen, nowScreen, nowLEDNum, runPara.sandNum, gDirection);
 
         for (uint8_t i = 0;i < LED_WIDTH;i++) {
             uint8_t ledBuf1 = 0;
@@ -185,7 +201,12 @@ int main(void)
         }
         Max7219_Display(led1_handle, 0, ledScreenData1);
         Max7219_Display(led2_handle, 0, ledScreenData2);
-        HAL_Delay(100);
+        uint32_t codeRuntime = Runtime_Stop() / 1000;
+        printf("codeRuntime:%dms\n", codeRuntime);
+        if (codeRuntime < runPara.frameTime) {
+            HAL_Delay(runPara.frameTime - codeRuntime);
+        }
+        HAL_GPIO_TogglePin(TEST_GPIO_Port, TEST_Pin);
     }
     /* USER CODE END 3 */
 }
@@ -228,7 +249,8 @@ void SystemClock_Config(void)
     {
         Error_Handler();
     }
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC | RCC_PERIPHCLK_USB;
+    PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV4;
     PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
     {
@@ -247,7 +269,7 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
     /* USER CODE BEGIN Error_Handler_Debug */
-              /* User can add his own implementation to report the HAL error return state */
+                      /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
     while (1)
     {
@@ -266,8 +288,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t* file, uint32_t line)
 {
     /* USER CODE BEGIN 6 */
-              /* User can add his own implementation to report the file name and line number,
-                 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-                 /* USER CODE END 6 */
+                      /* User can add his own implementation to report the file name and line number,
+                         ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+                         /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

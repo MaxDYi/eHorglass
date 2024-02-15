@@ -24,8 +24,8 @@
         <stlinkResetStrategy>2</stlinkResetStrategy>
     </StLinkDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <Jet>
         <JetConnSerialNo>CMSIS-DAP-v1-MuseLab:070000814646e3390231323936373657a5a5a5a597969908</JetConnSerialNo>
@@ -37,7 +37,7 @@
         <MultiCoreRunAll>0</MultiCoreRunAll>
     </Jet>
     <DebugChecksum>
-        <Checksum>530749550</Checksum>
+        <Checksum>434209183</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -97,9 +97,21 @@
         <ITMportsLogFile>0</ITMportsLogFile>
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
+    <struct_types>
+        <Fmt0>struct parameters-frameTime	4	0</Fmt0>
+        <Fmt1>struct parameters-initFlag	4	0</Fmt1>
+        <Fmt2>struct parameters-sandNum	4	0</Fmt2>
+    </struct_types>
     <array_types>
-        <Fmt0>uint8_t[64]	1	0</Fmt0>
-        <Fmt1>uint8_t[8]	1	0</Fmt1>
+        <Fmt0>uint32_t[64]	4	0</Fmt0>
+        <Fmt1>uint32_t[65]	4	0</Fmt1>
+        <Fmt2>uint8_t[64]	1	0</Fmt2>
+        <Fmt3>uint8_t[8]	1	0</Fmt3>
     </array_types>
     <watch_formats>
         <Fmt0>{W}42:i	3	0</Fmt0>
@@ -152,10 +164,20 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -163,19 +185,4 @@
         <Symbiont>0</Symbiont>
         <Exclusions />
     </DriverProfiling>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
-        <Category2>_ 2</Category2>
-    </LogFile>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
 </settings>

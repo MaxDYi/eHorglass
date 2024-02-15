@@ -1436,6 +1436,9 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
                 </file>
                 <file>
@@ -1452,6 +1455,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32f1xx_it.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
@@ -1486,6 +1492,12 @@
     <group>
         <name>Drivers</name>
         <group>
+            <name>AT</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\AT\AT.c</name>
+            </file>
+        </group>
+        <group>
             <name>CMSIS</name>
             <file>
                 <name>$PROJ_DIR$\..\Core\Src\system_stm32f1xx.c</name>
@@ -1510,6 +1522,18 @@
             </file>
         </group>
         <group>
+            <name>parameter</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\parameter\parameter.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Runtime</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\Runtime\Runtime.c</name>
+            </file>
+        </group>
+        <group>
             <name>SandMove</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\SandMove\SandMove.c</name>
@@ -1519,6 +1543,12 @@
             <name>STM32F1xx_HAL_Driver</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</name>

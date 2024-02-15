@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2024-02-04 20:48:36
- * @LastEditTime : 2024-02-05 22:10:12
+ * @LastEditTime : 2024-02-15 13:21:42
  * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\SandMove\SandMove.h
  */
 #ifndef __SANDMOVE_H__
@@ -33,7 +33,7 @@ typedef struct
     int y;
 }coord;
 
-coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t randNum);
+coord Sand_GetLoopCoord(uint8_t index, uint8_t direction, uint8_t moveOrder);
 
 void Sand_GetTarget(coord now_xy, coord* target_xy, uint8_t direction);
 

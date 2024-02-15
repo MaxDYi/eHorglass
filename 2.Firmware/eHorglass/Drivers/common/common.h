@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2024-02-04 16:37:57
- * @LastEditTime : 2024-02-06 10:02:31
+ * @LastEditTime : 2024-02-15 13:03:59
  * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\common\common.h
  */
 #ifndef __COMMON_H__
@@ -26,9 +26,7 @@
 
 #define MPU6050_ANGEL_OFFSET 1.0
 
-
-
-uint32_t FLASH_ReadWord(uint32_t address);
+void swap(int* a, int* b);
 
 
 #endif
