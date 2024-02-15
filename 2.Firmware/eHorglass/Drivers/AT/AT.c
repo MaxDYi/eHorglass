@@ -3,6 +3,8 @@
 #define AT_CMD_LEN 32
 
 #define PARA_SAND_NUM_MAX 64
+#define PARA_FRAME_TIME_MIN 20
+#define PARA_FRAME_TIME_MAX 1000
 
 struct parameters* flashPara;
 
@@ -58,9 +60,14 @@ void AT_RecevieSandNum(uint32_t sandNum)
 
 void AT_RecevieFrameTime(uint32_t time)
 {
-    flashPara->frameTime = time;
-    SaveParameters(flashPara);
-    NVIC_SystemReset();
+    if (time >= PARA_FRAME_TIME_MIN && time <= PARA_FRAME_TIME_MAX) {
+        flashPara->frameTime = time;
+        SaveParameters(flashPara);
+        NVIC_SystemReset();
+    }
+    else {
+        AT_ResponseError();
+    }
 }
 
 void AT_ParseCommand(uint8_t* buffer)
