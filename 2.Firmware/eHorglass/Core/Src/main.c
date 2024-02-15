@@ -19,6 +19,7 @@
  /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "dma.h"
 #include "i2c.h"
 #include "spi.h"
 #include "tim.h"
@@ -43,7 +44,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define UART_BUFFER_SIZE 256
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -58,12 +59,21 @@ uint8_t ledScreen1[LED_WIDTH * LED_WIDTH];
 uint8_t ledScreen2[LED_WIDTH * LED_WIDTH];
 uint8_t ledScreenData1[LED_WIDTH];
 uint8_t ledScreenData2[LED_WIDTH];
+uint8_t Uart_Buffer[UART_BUFFER_SIZE];
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+{
+    if (huart == &huart1)
+    {
+        AT_ParseCommand(Uart_Buffer);
+        memset(Uart_Buffer, 0, UART_BUFFER_SIZE);
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart1, Uart_Buffer, UART_BUFFER_SIZE);
+    }
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,6 +115,7 @@ int main(void)
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_DMA_Init();
     MX_I2C1_Init();
     MX_SPI1_Init();
     MX_SPI2_Init();
@@ -115,6 +126,7 @@ int main(void)
     /* USER CODE BEGIN 2 */
     uint8_t gDirection;
     LoadParameters(&runPara);
+    AT_Init(&runPara);
     Runtime_Init();
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 50);
@@ -153,6 +165,9 @@ int main(void)
             ledScreen2[xy.x * LED_WIDTH + xy.y] = FULL;
         }
     }
+
+    memset(Uart_Buffer, 0, UART_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, Uart_Buffer, UART_BUFFER_SIZE);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -202,11 +217,11 @@ int main(void)
         Max7219_Display(led1_handle, 0, ledScreenData1);
         Max7219_Display(led2_handle, 0, ledScreenData2);
         uint32_t codeRuntime = Runtime_Stop() / 1000;
-        printf("codeRuntime:%dms\n", codeRuntime);
+        //printf("codeRuntime:%dms\n", codeRuntime);
         if (codeRuntime < runPara.frameTime) {
             HAL_Delay(runPara.frameTime - codeRuntime);
         }
-        HAL_GPIO_TogglePin(TEST_GPIO_Port, TEST_Pin);
+        //HAL_GPIO_TogglePin(TEST_GPIO_Port, TEST_Pin);
     }
     /* USER CODE END 3 */
 }
@@ -269,7 +284,7 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
     /* USER CODE BEGIN Error_Handler_Debug */
-                      /* User can add his own implementation to report the HAL error return state */
+                          /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
     while (1)
     {
@@ -288,8 +303,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t* file, uint32_t line)
 {
     /* USER CODE BEGIN 6 */
-                      /* User can add his own implementation to report the file name and line number,
-                         ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-                         /* USER CODE END 6 */
+                          /* User can add his own implementation to report the file name and line number,
+                             ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+                             /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

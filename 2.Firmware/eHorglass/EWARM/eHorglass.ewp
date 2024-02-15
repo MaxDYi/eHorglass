@@ -1117,6 +1117,9 @@
           <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
         </file>
         <file>
+          <name>$PROJ_DIR$/../Core/Src/dma.c</name>
+        </file>
+        <file>
           <name>$PROJ_DIR$\..\Core\Src\i2c.c</name>
         </file>
         <file>
