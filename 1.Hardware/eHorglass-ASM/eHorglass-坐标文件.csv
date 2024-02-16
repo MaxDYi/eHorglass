@@ -4,9 +4,9 @@ E:\eHorglass\1.Hardware\eHorglass-PRJ\Project Outputs for eHorglass\Pick Place f
 ========================================================================================================================
 File Design Information:
 
-Date:       06/02/24
-Time:       14:04
-Revision:   ffdfd6181acce8f6d851e83279a9d29a519b9d0c
+Date:       16/02/24
+Time:       10:55
+Revision:   1c73c803de211d4ffc0fe94653045f94a4bb3d40
 Variant:    No variations
 Units used: mil
 
@@ -47,7 +47,7 @@ Units used: mil
 "R5","20K","BottomLayer","R0603_M","767.714","1314.958","45","ÌùÆ¬µç×è"
 "R4","10K","BottomLayer","R0603_M","433.071","354.327","90","ÌùÆ¬µç×è"
 "R3","1K","BottomLayer","R0603_M","787.405","314.961","180","ÌùÆ¬µç×è"
-"R2","3K","BottomLayer","R0603_M","1062.992","629.924","270","ÌùÆ¬µç×è"
+"R2","2K","BottomLayer","R0603_M","1062.992","629.924","270","ÌùÆ¬µç×è"
 "R1","1K","BottomLayer","R0603_M","787.405","377.953","180","ÌùÆ¬µç×è"
 "Q1","AO3401","BottomLayer","SOT23-3N","590.551","511.811","180","P¹µµÀ 30V/4.2A"
 "LED2","GREEN","BottomLayer","LED0603_G","895.000","59.053","0","ÌùÆ¬LED"
