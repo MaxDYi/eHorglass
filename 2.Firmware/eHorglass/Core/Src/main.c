@@ -120,11 +120,11 @@ int main(void)
     MX_SPI1_Init();
     MX_SPI2_Init();
     MX_USART1_UART_Init();
-    MX_USB_DEVICE_Init();
+    //MX_USB_DEVICE_Init();
     MX_ADC1_Init();
     MX_TIM3_Init();
     /* USER CODE BEGIN 2 */
-    uint8_t gDirection;
+  
     LoadParameters(&runPara);
     AT_Init(&runPara);
     Runtime_Init();
@@ -134,7 +134,6 @@ int main(void)
     srand(ADC_vaule);
     MPU6050_Init();
     HAL_Delay(100);
-    gDirection = MPU6050_GetDirection(1);
     max7219_handle led1_handle;
     max7219_handle led2_handle;
     led1_handle.spiHandle = &hspi1;
@@ -147,8 +146,9 @@ int main(void)
     Max7219_Init(led2_handle);
     Max7219_DisplayNromal(led1_handle);
     Max7219_DisplayNromal(led2_handle);
-
-    srand((unsigned)time(NULL));
+    
+    uint8_t gDirection = MPU6050_GetDirection(runPara.angleOffset);
+    
     for (uint8_t i = 0;i < LED_WIDTH * LED_WIDTH;i++) {
         ledScreen1[i] = EMPTY;
         ledScreen2[i] = EMPTY;

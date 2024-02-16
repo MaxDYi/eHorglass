@@ -2,8 +2,8 @@
  * @Description  :
  * @Author       : MaxDYi
  * @Date         : 2024-02-15 14:22:57
- * @LastEditTime : 2024-02-15 15:10:26
- * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\Parameter\Parameter.h
+ * @LastEditTime : 2024-02-16 09:55:34
+ * @FilePath     : \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\parameter\parameter.h
  */
 #ifndef __PARAMETER_H__
 #define __PARAMETER_H__
@@ -18,6 +18,7 @@ struct parameters
     uint32_t initFlag;
     uint32_t sandNum;
     uint32_t frameTime;
+    float angleOffset;
 };
 
 void LoadParameters(struct parameters* para);

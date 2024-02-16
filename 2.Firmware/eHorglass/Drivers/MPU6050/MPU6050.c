@@ -157,6 +157,9 @@ uint8_t MPU6050_GetDirection(float angelOffset) {
     ay = (float)aData[1] / (0xffff / 4);
     float radian = atan2(ax, ay);
     float angle = radian * 180.0 / 3.14159265 + angelOffset;
+    while (angle > 360) {
+        angle = angle - 360;
+    }
     uint8_t gDirection = 0;
     if (DataInRange(angle, 90, 22.5)) {
         gDirection = 0;

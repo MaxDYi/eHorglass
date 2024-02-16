@@ -29,13 +29,6 @@ void AT_ResponseInfo(void)
     printf("2024/02\r\n");
 }
 
-void AT_RecevieReInit(void)
-{
-    flashPara->initFlag = 0;
-    SaveParameters(flashPara);
-    NVIC_SystemReset();
-}
-
 void AT_ResponseSandNum(uint32_t sandNum)
 {
     printf("AT+SANDNUM=%d\r\n", sandNum);
@@ -44,6 +37,13 @@ void AT_ResponseSandNum(uint32_t sandNum)
 void AT_ResponseFrameTime(uint32_t time)
 {
     printf("AT+FRAMETIME=%d\r\n", time);
+}
+
+void AT_RecevieReInit(void)
+{
+    flashPara->initFlag = 0;
+    SaveParameters(flashPara);
+    NVIC_SystemReset();
 }
 
 void AT_RecevieSandNum(uint32_t sandNum)
@@ -68,6 +68,13 @@ void AT_RecevieFrameTime(uint32_t time)
     else {
         AT_ResponseError();
     }
+}
+
+void AT_ReceiveAngleOffset(uint32_t angleOffset)
+{
+    flashPara->angleOffset = angleOffset;
+    SaveParameters(flashPara);
+    NVIC_SystemReset();
 }
 
 void AT_ParseCommand(uint8_t* buffer)
@@ -97,7 +104,12 @@ void AT_ParseCommand(uint8_t* buffer)
             if (result == 2) {
                 // 解析成功，处理数字情况
                 if (strcmp(command, "REINIT") == 0) {
-                    AT_RecevieReInit();
+                    if (number == 1) {
+                        AT_RecevieReInit();
+                    }
+                    else {
+                        AT_ResponseError();
+                    }
                 }
                 else if (strcmp(command, "SANDNUM") == 0) {
                     AT_RecevieSandNum(number);
@@ -108,13 +120,15 @@ void AT_ParseCommand(uint8_t* buffer)
             }
             else {
                 // 解析失败，输入格式不符合预期
-                printf("Invalid format.\n");
+                //printf("Invalid format.\n");
+                AT_ResponseError();
             }
         }
     }
     else {
         // 输入格式不符合预期
-        printf("Invalid format.\n");
+        //printf("Invalid format.\n");
+        AT_ResponseError();
     }
 
 }
