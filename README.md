@@ -2,22 +2,21 @@
 
 外壳设计
 
-开关大小8x14mm
+开关大小8.0x14.0mm
 
-3D打印厚度1.2mm
+3D打印厚度1.5mm
 
-| 内容 | 高度   |
-| ---- | ------ |
-| 铜柱 | 10.0mm |
-| 板厚 | 1.6mm  |
-| 排母 | 8.5mm  |
-| 点阵 | 6.5mm  |
-| 冗余 | 0.2mm  |
-| 合计 | 26.8mm |
+| 内容     | 高度   |
+| -------- | ------ |
+| 底面     | 4.0mm  |
+| 铜柱     | 15.0mm |
+| 板厚     | 1.6mm  |
+| 点阵     | 13mm   |
+| 合计33.6 | 33.6mm |
 
+点阵屏外形尺寸
 
-
-![LED点阵](https://raw.githubusercontent.com/MaxDYi/PicGo/main/202401081244703.jpg)
+![image-20240127191458166](https://raw.githubusercontent.com/MaxDYi/PicGo/main/img/202401271914271.png)
 
 
 
