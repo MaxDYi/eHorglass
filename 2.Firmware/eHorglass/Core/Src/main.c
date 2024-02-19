@@ -147,7 +147,7 @@ int main(void)
     Max7219_DisplayNromal(led1_handle);
     Max7219_DisplayNromal(led2_handle);
     
-    uint8_t gDirection = MPU6050_GetDirection(runPara.angleOffset);
+    uint8_t gDirection = MPU6050_GetDirection(0);
     
     for (uint8_t i = 0;i < LED_WIDTH * LED_WIDTH;i++) {
         ledScreen1[i] = EMPTY;

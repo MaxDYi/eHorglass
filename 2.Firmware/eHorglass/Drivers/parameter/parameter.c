@@ -8,7 +8,6 @@ struct parameters defaultParameters = {
     .initFlag = 0x01,
     .sandNum = 64,
     .frameTime = 200,
-    .angleOffset = 0,
 };
 
 void LoadParameters(struct parameters* para) {
