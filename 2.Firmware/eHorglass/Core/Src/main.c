@@ -131,9 +131,15 @@ int main(void)
     HAL_ADC_Start(&hadc1);
     HAL_ADC_PollForConversion(&hadc1, 50);
     uint16_t ADC_vaule = HAL_ADC_GetValue(&hadc1);
-    srand(ADC_vaule);
+    
     MPU6050_Init();
-    HAL_Delay(100);
+    while(MPU6050ReadID()==0){
+      MPU6050_Init();
+      HAL_Delay(500);
+    }
+    
+    srand(ADC_vaule);
+
     max7219_handle led1_handle;
     max7219_handle led2_handle;
     led1_handle.spiHandle = &hspi1;
@@ -146,7 +152,7 @@ int main(void)
     Max7219_Init(led2_handle);
     Max7219_DisplayNromal(led1_handle);
     Max7219_DisplayNromal(led2_handle);
-    
+    HAL_Delay(200);
     uint8_t gDirection = MPU6050_GetDirection(0);
     
     for (uint8_t i = 0;i < LED_WIDTH * LED_WIDTH;i++) {

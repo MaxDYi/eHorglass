@@ -56,7 +56,7 @@ void MPU6050_ReadData(uint8_t reg_add, uint8_t* Read, uint8_t num)
  */
 void MPU6050_Init(void)
 {
-    // HAL_Delay(1000);
+    HAL_Delay(100);
     MPU6050_WriteReg(MPU6050_RA_PWR_MGMT_1, 0x80);
     HAL_Delay(100);
     MPU6050_WriteReg(MPU6050_RA_PWR_MGMT_1, 0x00); // ½â³ýÐÝÃß×´Ì¬
@@ -84,7 +84,7 @@ uint8_t MPU6050ReadID(void)
     }
     else
     {
-        printf("MPU6050 ID = 0x%02X\r\n", Re);
+        //printf("MPU6050 ID = 0x%02X\r\n", Re);
         return 1;
     }
 }
