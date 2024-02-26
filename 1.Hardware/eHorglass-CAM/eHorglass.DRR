@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: eHorglass.PcbDoc   2024/2/16  10:54:52
+NCDrill File Report For: eHorglass.PcbDoc   2024/2/26  15:59:00
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,7 +8,7 @@ ASCII SlotHoles File : eHorglass-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      12mil (0.305mm)                                           Round             93        PTH        16.51inch (419.39mm)
+T1      12mil (0.305mm)                                           Round             94        PTH        16.57inch (420.97mm)
 T2      28mil (0.701mm)                                           Slot              2         PTH        0.80inch (20.27mm)
 T3      32mil (0.8mm)                                             Slot              2         PTH        0.77inch (19.64mm)
 T4      35mil (0.899mm)                                           Round             14        PTH        4.49inch (114.12mm)
@@ -17,6 +17,6 @@ T6      40mil (1.016mm)                                           Round         
 T7      125mil (3.175mm)                                          Round             4         PTH        6.36inch (161.55mm)
 T8      30mil (0.749mm)                                           Round             2         NPTH       0.23inch (5.78mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              173
+Totals                                                                              174
 
 Total Processing Time (hh:mm:ss) : 00:00:00

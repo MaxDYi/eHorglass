@@ -57,11 +57,12 @@ void Max7219_WriteReg(max7219_handle handle, uint8_t addr, uint8_t data)
 
 void Max7219_Init(max7219_handle handle)
 {
+    Max7219_WriteReg(handle, MAX7219_MODE_SHUTDOWN_ADDR, MAX7219_MODE_SHUTDOWN);
     Max7219_WriteReg(handle, MAX7219_MODE_DECODE_ADDR, MAX7219_MODE_NODECODE);
     Max7219_WriteReg(handle, MAX7219_MODE_INTENSITY_ADDR, MAX7219_MODE_INTENSITY_17);
     Max7219_WriteReg(handle, MAX7219_MODE_SCAN_LIMIT_ADDR, MAX7219_MODE_SCAN_7);
-    Max7219_WriteReg(handle, MAX7219_MODE_SHUTDOWN_ADDR, MAX7219_MODE_WORK);
     Max7219_WriteReg(handle, MAX7219_MODE_DISPALY_ADDR, MAX7219_MODE_NORMAL);
+    Max7219_WriteReg(handle, MAX7219_MODE_SHUTDOWN_ADDR, MAX7219_MODE_WORK);
     Max7219_TurnOffAll(handle);
 }
 

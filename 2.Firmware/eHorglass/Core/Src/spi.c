@@ -1,27 +1,9 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file    spi.c
-  * @brief   This file provides code for the configuration
-  *          of the SPI instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "spi.h"
 
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 SPI_HandleTypeDef hspi1;
@@ -32,11 +14,9 @@ void MX_SPI1_Init(void)
 {
 
   /* USER CODE BEGIN SPI1_Init 0 */
-
   /* USER CODE END SPI1_Init 0 */
 
   /* USER CODE BEGIN SPI1_Init 1 */
-
   /* USER CODE END SPI1_Init 1 */
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
@@ -55,7 +35,6 @@ void MX_SPI1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI1_Init 2 */
-
   /* USER CODE END SPI1_Init 2 */
 
 }
@@ -64,11 +43,9 @@ void MX_SPI2_Init(void)
 {
 
   /* USER CODE BEGIN SPI2_Init 0 */
-
   /* USER CODE END SPI2_Init 0 */
 
   /* USER CODE BEGIN SPI2_Init 1 */
-
   /* USER CODE END SPI2_Init 1 */
   hspi2.Instance = SPI2;
   hspi2.Init.Mode = SPI_MODE_MASTER;
@@ -87,7 +64,6 @@ void MX_SPI2_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI2_Init 2 */
-
   /* USER CODE END SPI2_Init 2 */
 
 }
@@ -99,7 +75,6 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
   if(spiHandle->Instance==SPI1)
   {
   /* USER CODE BEGIN SPI1_MspInit 0 */
-
   /* USER CODE END SPI1_MspInit 0 */
     /* SPI1 clock enable */
     __HAL_RCC_SPI1_CLK_ENABLE();
@@ -118,13 +93,11 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     HAL_NVIC_SetPriority(SPI1_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(SPI1_IRQn);
   /* USER CODE BEGIN SPI1_MspInit 1 */
-
   /* USER CODE END SPI1_MspInit 1 */
   }
   else if(spiHandle->Instance==SPI2)
   {
   /* USER CODE BEGIN SPI2_MspInit 0 */
-
   /* USER CODE END SPI2_MspInit 0 */
     /* SPI2 clock enable */
     __HAL_RCC_SPI2_CLK_ENABLE();
@@ -143,7 +116,6 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     HAL_NVIC_SetPriority(SPI2_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(SPI2_IRQn);
   /* USER CODE BEGIN SPI2_MspInit 1 */
-
   /* USER CODE END SPI2_MspInit 1 */
   }
 }
@@ -154,7 +126,6 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
   if(spiHandle->Instance==SPI1)
   {
   /* USER CODE BEGIN SPI1_MspDeInit 0 */
-
   /* USER CODE END SPI1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI1_CLK_DISABLE();
@@ -168,13 +139,11 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     /* SPI1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(SPI1_IRQn);
   /* USER CODE BEGIN SPI1_MspDeInit 1 */
-
   /* USER CODE END SPI1_MspDeInit 1 */
   }
   else if(spiHandle->Instance==SPI2)
   {
   /* USER CODE BEGIN SPI2_MspDeInit 0 */
-
   /* USER CODE END SPI2_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI2_CLK_DISABLE();
@@ -188,11 +157,9 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     /* SPI2 interrupt Deinit */
     HAL_NVIC_DisableIRQ(SPI2_IRQn);
   /* USER CODE BEGIN SPI2_MspDeInit 1 */
-
   /* USER CODE END SPI2_MspDeInit 1 */
   }
 }
 
 /* USER CODE BEGIN 1 */
-
 /* USER CODE END 1 */

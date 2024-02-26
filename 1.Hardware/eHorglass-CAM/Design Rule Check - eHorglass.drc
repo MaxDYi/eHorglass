@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : E:\eHorglass\1.Hardware\eHorglass-PRJ\eHorglass.PcbDoc
-Date     : 2024/2/16
-Time     : 10:55:44
+Date     : 2024/2/26
+Time     : 15:57:58
 
 Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
 Rule Violations :0
@@ -45,4 +45,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01

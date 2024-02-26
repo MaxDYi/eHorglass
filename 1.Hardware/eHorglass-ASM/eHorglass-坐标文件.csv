@@ -4,13 +4,16 @@ E:\eHorglass\1.Hardware\eHorglass-PRJ\Project Outputs for eHorglass\Pick Place f
 ========================================================================================================================
 File Design Information:
 
-Date:       16/02/24
-Time:       10:55
-Revision:   1c73c803de211d4ffc0fe94653045f94a4bb3d40
+Date:       26/02/24
+Time:       15:59
+Revision:   7d12eba7fbdf2646bbd708ec8c3217afb0b22985
 Variant:    No variations
 Units used: mil
 
 "Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"R17","22R","BottomLayer","R0603_M","181.102","905.509","90","ÌùÆ¬µç×è"
+"R16","22R","BottomLayer","R0603_M","110.236","905.509","90","ÌùÆ¬µç×è"
+"R15","1K5","BottomLayer","R0603_M","433.074","807.087","180","ÌùÆ¬µç×è"
 "R14","10K","BottomLayer","R0603_M","1185.002","3399.998","135","ÌùÆ¬µç×è"
 "USBC1","TYPE-C 2.0 -16P","BottomLayer","USB-C-SMD_16P","157.480","590.551","270","USB2.0_Type-C_16PinÄ¸×ù"
 "R13","4.7K","BottomLayer","R0603_M","1059.998","2545.002","315","ÌùÆ¬µç×è"

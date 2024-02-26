@@ -37,7 +37,7 @@ size_t __write(int handle, const unsigned char *buffer, size_t size)
     /* Sending in normal mode */
     if (HAL_UART_Transmit(&DEBUG_UART, (uint8_t *)buffer, size, 0xFFFF) == HAL_OK)
     {
-        
+        CDC_Transmit_FS((uint8_t *)buffer,size);
         return size;
     }
     else
