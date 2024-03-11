@@ -25,7 +25,7 @@
 
 # 2 原理图
 
-![eHorglass-SCH-V0.0_page-0001](https://raw.githubusercontent.com/MaxDYi/PicGo/main/202402181102905.jpg)
+![eHorglass-SCH-V0.0](https://raw.githubusercontent.com/MaxDYi/PicGo/main/202403111732414.png)
 
 # 3 PCB
 
