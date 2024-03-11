@@ -2,8 +2,8 @@
  * @Description  : LED点阵驱动
  * @Author       : MaxDYi
  * @Date         : 2023-12-30 17:17:09
- * @LastEditTime: 2024-01-11 12:20:19
- * @FilePath: \eHorglass\Drivers\MAX7219\MAX7219.c
+ * @LastEditTime: 2024-03-11 16:03:47
+ * @FilePath: \ArcheryTimer_Appe:\eHorglass\2.Firmware\eHorglass\Drivers\MAX7219\MAX7219.c
  */
 
 #include "MAX7219.h"
@@ -46,15 +46,26 @@
 #define MAX7219_MODE_TEST 0X01
 #define MAX7219_MODE_NORMAL 0X00
 
-
+/**
+ * @description: 写MAX7219寄存器
+ * @param {max7219_handle} handle
+ * @param {uint8_t} addr
+ * @param {uint8_t} data
+ * @return {*}
+ */
 void Max7219_WriteReg(max7219_handle handle, uint8_t addr, uint8_t data)
 {
-    uint8_t tx_data[2] = { addr, data };
+    uint8_t tx_data[2] = {addr, data};
     HAL_GPIO_WritePin(handle.CS_GPIO, handle.CS_Pin, GPIO_PIN_RESET);
     HAL_SPI_Transmit(handle.spiHandle, tx_data, 2, 0xff);
     HAL_GPIO_WritePin(handle.CS_GPIO, handle.CS_Pin, GPIO_PIN_SET);
 }
 
+/**
+ * @description: MAX7219初始化
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_Init(max7219_handle handle)
 {
     Max7219_WriteReg(handle, MAX7219_MODE_SHUTDOWN_ADDR, MAX7219_MODE_SHUTDOWN);
@@ -66,6 +77,11 @@ void Max7219_Init(max7219_handle handle)
     Max7219_TurnOffAll(handle);
 }
 
+/**
+ * @description: 关闭所有LED
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_TurnOffAll(max7219_handle handle)
 {
     for (uint8_t i = 0; i < 8; i++)
@@ -74,6 +90,11 @@ void Max7219_TurnOffAll(max7219_handle handle)
     }
 }
 
+/**
+ * @description: 打开所有LED
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_TurnOnAll(max7219_handle handle)
 {
     for (uint8_t i = 0; i < 8; i++)
@@ -82,7 +103,13 @@ void Max7219_TurnOnAll(max7219_handle handle)
     }
 }
 
-void Max7219_RotateData(uint8_t direction, uint8_t* data)
+/**
+ * @description: 旋转数据方向
+ * @param {uint8_t} direction
+ * @param {uint8_t} *data
+ * @return {*}
+ */
+void Max7219_RotateData(uint8_t direction, uint8_t *data)
 {
     uint8_t temp[8];
 
@@ -132,7 +159,14 @@ void Max7219_RotateData(uint8_t direction, uint8_t* data)
     }
 }
 
-void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t* data)
+/**
+ * @description: 显示LED数据
+ * @param {max7219_handle} handle
+ * @param {uint8_t} direction
+ * @param {uint8_t} *data
+ * @return {*}
+ */
+void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t *data)
 {
     Max7219_TurnOffAll(handle);
     if (direction > 3)
@@ -148,21 +182,34 @@ void Max7219_Display(max7219_handle handle, uint8_t direction, uint8_t* data)
     for (uint8_t i = 0; i < 8; i++)
     {
         Max7219_WriteReg(handle, i + 1, temp[i]);
-        //printf("%02x\t", temp[i]);
     }
-    //printf("\r\n");
 }
 
+/**
+ * @description: MAX7219普通显示模式
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_DisplayNromal(max7219_handle handle)
 {
     Max7219_WriteReg(handle, 0x0F, MAX7219_MODE_NORMAL);
 }
 
+/**
+ * @description: MAX7219测试显示模式
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_DisplayTest(max7219_handle handle)
 {
     Max7219_WriteReg(handle, 0x0F, MAX7219_MODE_TEST);
 }
 
+/**
+ * @description: MAX7219测试
+ * @param {max7219_handle} handle
+ * @return {*}
+ */
 void Max7219_Test(max7219_handle handle)
 {
     Max7219_TurnOnAll(handle);

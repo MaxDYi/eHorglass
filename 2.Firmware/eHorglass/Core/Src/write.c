@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "main.h"
 #include "usart.h"
+#include "usbd_cdc.h"
 #include "usbd_cdc_if.h"
 #pragma module_name = "?__write"
 
@@ -35,13 +36,15 @@ size_t __write(int handle, const unsigned char *buffer, size_t size)
     }
 
     /* Sending in normal mode */
+    
     if (HAL_UART_Transmit(&DEBUG_UART, (uint8_t *)buffer, size, 0xFFFF) == HAL_OK)
     {
-        CDC_Transmit_FS((uint8_t *)buffer,size);
+        //CDC_Transmit_FS((uint8_t *)buffer,size);
         return size;
     }
     else
     {
         return _LLIO_ERROR;
     }
+
 }

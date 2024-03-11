@@ -1,6 +1,6 @@
 {
   "workspace": {
-    "path": "e:\\ArcheryCounter\\2.Firmware\\ArcheryCounter_App\\EWARM\\Project.eww"
+    "path": "${workspaceFolder}\\EWARM\\Project.eww"
   },
   "workspaces": {
     "${workspaceFolder}\\EWARM\\Project.eww": {

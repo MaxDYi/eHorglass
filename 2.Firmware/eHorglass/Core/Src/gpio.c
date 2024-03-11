@@ -94,7 +94,7 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(LED2_CS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
