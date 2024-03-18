@@ -149,7 +149,7 @@ int main(void)
     MPU6050_Init();
     while(MPU6050ReadID() == 0){
       MPU6050_Init();
-      HAL_Delay(500);
+      HAL_Delay(200);
     }
     
     srand(ADC_vaule);

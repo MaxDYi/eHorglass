@@ -24,8 +24,8 @@
         <stlinkResetStrategy>2</stlinkResetStrategy>
     </StLinkDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <Jet>
         <JetConnSerialNo>CMSIS-DAP-v1-MuseLab:070000814646e3390231323936373657a5a5a5a597969908</JetConnSerialNo>
@@ -37,7 +37,7 @@
         <MultiCoreRunAll>0</MultiCoreRunAll>
     </Jet>
     <DebugChecksum>
-        <Checksum>983329472</Checksum>
+        <Checksum>3222965558</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>

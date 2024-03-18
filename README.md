@@ -165,3 +165,5 @@ STM32F103C8T6共64KB内部FLASH，分为64Page，每Page为1KB。
 - AT+FRAMETIME=num（AT+FRAMETIME=150）
 
 其中，num为正整数。对于AT+SANDNUM，num的限定值为1-64；对于AT+FRAMETIME，num的限定值为20-1000。
+
+写入后需要重启电源。

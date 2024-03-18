@@ -120,8 +120,7 @@ void AT_RecevieSandNum(uint32_t sandNum)
         SaveParameters(flashPara);
         AT_ResponseSandNum(sandNum);
         //AT_ResponseOK();
-        HAL_Delay(10);
-        NVIC_SystemReset();
+        //NVIC_SystemReset();
     }
     else
     {
@@ -142,8 +141,8 @@ void AT_RecevieFrameTime(uint32_t time)
         SaveParameters(flashPara);
         AT_ResponseFrameTime(time);
         //AT_ResponseOK();
-        HAL_Delay(10);
-        NVIC_SystemReset();
+        //HAL_Delay(10); 
+        //NVIC_SystemReset();
     }
     else
     {
