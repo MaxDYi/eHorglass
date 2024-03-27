@@ -191,7 +191,7 @@ int main(void)
 
         Runtime_Start();
 
-        gDirection = MPU6050_GetDirection(1);
+        gDirection = MPU6050_GetDirection(0);
 
         uint8_t upLED = Sand_GetUpLed(gDirection);
         uint8_t downLED = Sand_GetDownLed(gDirection);
@@ -228,7 +228,6 @@ int main(void)
         Max7219_Display(led1_handle, 0, ledScreenData1);
         Max7219_Display(led2_handle, 0, ledScreenData2);
         uint32_t codeRuntime = Runtime_Stop() / 1000;
-        //printf("codeRuntime:%dms\n", codeRuntime);
         if (codeRuntime < runPara.frameTime) {
             HAL_Delay(runPara.frameTime - codeRuntime);
         }

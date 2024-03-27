@@ -18,10 +18,10 @@
     <StLinkDriver>
         <stlinkserialNo>USB0</stlinkserialNo>
         <stlinkfoundProbes />
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>2</stlinkResetStrategy>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
     </StLinkDriver>
     <ArmDriver>
         <EnableCache>0</EnableCache>
@@ -37,7 +37,7 @@
         <MultiCoreRunAll>0</MultiCoreRunAll>
     </Jet>
     <DebugChecksum>
-        <Checksum>3222965558</Checksum>
+        <Checksum>2613055618</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -109,10 +109,11 @@
         <Fmt3>uint8_t[8]	1	0</Fmt3>
     </array_types>
     <watch_formats>
-        <Fmt0>{W}42:i	3	0</Fmt0>
-        <Fmt1>{W}42:index	3	0</Fmt1>
-        <Fmt2>{W}42:j	3	0</Fmt2>
-        <Fmt3>{W}42:row	3	0</Fmt3>
+        <Fmt0>{W}42:gDirection	4	0</Fmt0>
+        <Fmt1>{W}42:i	3	0</Fmt1>
+        <Fmt2>{W}42:index	3	0</Fmt2>
+        <Fmt3>{W}42:j	3	0</Fmt3>
+        <Fmt4>{W}42:row	3	0</Fmt4>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
